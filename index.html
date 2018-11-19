@@ -69,15 +69,98 @@
             </section>
         </div>
     </div>
+    <div class="container-fluid">
+        <section class="inspiration">
+            <div class="row">
+                <div class="section-header col-xs-12">
+                    <h2>Travel Inspiration</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="slideshow-container">
+                        <div class="photoSlides fade">
+                            <div class="numbers">1 / 4</div>
+                            <img src="images/photo1.jpg">
+                            <div class="text">Machu Picchu, Peru</div>
+                        </div>
+
+                        <div class="photoSlides fade">
+                            <div class="numbers">2 / 4</div>
+                            <img src="images/photo2.jpg">
+                            <div class="text">Sydney, Australia</div>
+                        </div>
+
+                        <div class="photoSlides fade">
+                            <div class="numbers">3 / 4</div>
+                            <img src="images/photo3.jpg">
+                            <div class="text">Tarangire National Park, Arusha, Tanzania</div>
+                        </div>
+                        <div class="photoSlides fade">
+                            <div class="numbers">4 / 4</div>
+                            <img src="images/photo4.jpg">
+                            <div class="text">Wiang Kum Kam, ตำบล ช้างเผือก, Thailand</div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-header col-xs-12">
+                            <h3>Photo Search</h3>
+                        </div>
+                        <div class="content col-xs-12">
+                            <p>Enter a location to search for photo inspiration for your next trip.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="content col-xs-12">
+                            <input type="text" id="photo-input" name="photo-search" placeholder="Location">
+                        </div>
+                    </div>
+                    <div id="photo-search">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <ul class="footer col-xs-12">
+                    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href=""><i class="fas fa-plane-departure"></i> Flights</a></li>
+                    <li><a href=""><i class="fas fa-lightbulb"></i> Travel Inspiration</a></li>
+                    <li><a href=""><i class="fas fa-camera-retro"></i> Attractions</a></li>
+                    <li><a href=""><i class="fas fa-bed"></i> Accommodation</a></li>
+                    <li><a href=""><i class="fas fa-utensils"></i> Restaraunts</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
-
-
+    <script src="js/unsplash.js"></script>
+    <script src="js/photos.js"></script>
+   
 </body>
 
 </html>
