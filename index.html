@@ -137,6 +137,38 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <section class="attractions">
+            <div class="row">
+                <div class="section-header col-xs-12">
+                    <h2>Attractions</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="content search col-xs-12 col-lg-6">
+                    <div id="search-container">
+                        <div>
+                            Please enter a location to search for attractions, accommodation and restaraunts.
+                        </div>
+                        <div id="map-search">
+                            <input type="text" id="search-bar" name="location-search" placeholder="Location">
+                            <div class="radios">
+                                <input type="radio" name="search" value="All"> All
+                                <input type="radio" name="search" value="Attractions"> Attractions
+                                <input type="radio" name="search" value="Accommodation"> Accommodation
+                                <input type="radio" name="search" value="Restaraunts"> Restaraunts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-6">
+                    <div id="map"></div>
+                
+
+                </div>
+            </div>
+        </section>
+    </div>
     
     <footer>
         <div class="container-fluid">
@@ -160,7 +192,10 @@
     <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
     <script src="js/unsplash.js"></script>
     <script src="js/photos.js"></script>
-   
+    <script src="js/maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvDpFql1B498CuRVJLArVt3Bf_tAcaDnc&callback=initMap&libraries=places" async defer></script>
+
+
 </body>
 
 </html>
