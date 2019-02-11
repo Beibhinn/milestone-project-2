@@ -1,0 +1,340 @@
+
+/* 054a91
+d6fff6
+231651
+4dccbd
+ff8484 */
+
+
+
+/*------------------------------------------------Navbar */
+
+nav {
+    -webkit-box-shadow: 0 20px 8px -8px #999;
+    -moz-box-shadow: 0 20px 18px -18px #999;
+    box-shadow: 0 20px 18px -18px #999;
+    height: 110px;
+    background-color: #231651;
+    border-color: #4dccbd;
+}
+
+#logo {
+    height: 100px;
+    padding-top: 5px;
+}
+
+#logo>img:hover {
+    transition: 1s ease-in-out;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#logo>img {
+    height:100px;
+    transition: 1s ease-in-out;
+}
+
+ul.nav {
+    padding-top: 30px;
+}
+
+ul.nav>li>a {
+    color: #ffffff;
+    font-family: 'Parisienne', cursive;
+    font-size: large;
+    transition: 0.5s ease-in-out;
+}
+
+ul.nav>li>a:hover {
+    color: #4dccbd;
+    background-color: transparent;
+}
+
+/*------------------------------------------------Jumbotron */
+
+div.jumbotron {
+    margin-top: 110px;
+    margin-bottom: 0px;
+    color: #4dccbd;
+    background: url('../images/cover1.jpg');  
+    background-size: cover;
+    height: 80vh;
+}
+
+
+
+
+
+
+
+
+/*------------------------------------------------Flights */
+
+.color2 {
+    background-color: #d6fff6;
+}
+
+.flights {
+    padding-bottom: 20px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+label>span {
+    font-size: medium;
+}
+
+label.bpk-radio>#text {
+    font-size: small;
+}
+
+
+    
+
+
+/*------------------------------------------------Photos */
+
+#inspiration {
+    padding-bottom: 20px;
+}
+
+.photoSlides>img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.photoSlides>.text{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.photoSlides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease-in-out;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.numbers {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    opacity: 1;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.content {
+    text-align: center;
+}
+
+input {
+    border-radius: 8px;
+    text-align: center;
+}
+
+#photo-search {
+    margin-top: 15px;
+    display: none;
+    min-height: 500px;
+    background-color: red;
+}
+/*------------------------------------------------Attractions */
+
+.color3 {
+    background-color: #4dccbd;
+    color: #054a91;
+}
+
+.attractions {
+    padding-bottom: 20px;
+}
+
+.search {
+    min-height: 500px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#search-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#map {
+    border-radius: 20px;
+}
+
+
+/*------------------------------------------------Accommodation */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------Restaraunts */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------Footer */
+
+footer {
+    padding: 15px;
+    background-color: #231651;
+    -webkit-box-shadow: 0 -2px 6px  #999;
+    -moz-box-shadow: 0 -2px 6px  #999;
+    box-shadow: 0 -2px 6px  #999;
+}
+
+ul.footer {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.footer>li{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    padding-right: 10px;
+}
+
+ul.footer>li>a {
+    color: #ffffff;
+    font-family: 'Parisienne', cursive;
+    font-size: medium;
+    transition: 0.5s ease-in-out;
+}
+
+ul.footer>li>a:hover {
+    color: #4dccbd;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*-----------------------------------------------Scripts*/
+
+div#map {
+    min-height: 500px;
+}
