@@ -1,3 +1,8 @@
+/*global $*/
+
+function onPhotoSearchSubmit() {
+    searchForPhotos($("#photo-input").val(), handleUnsplashResponse, (e) => console.log(e));
+}
 
 
 function searchForPhotos(searchTerms, onSuccess, onError) {
@@ -6,7 +11,7 @@ function searchForPhotos(searchTerms, onSuccess, onError) {
     }
     $.ajax({ 
        type : "GET", 
-       url : "https://api.unsplash.com/search/photos?query="+encodeURIComponent(searchTerms.trim())+"&orientation=squarish", 
+       url : "https://api.unsplash.com/search/photos?query="+encodeURIComponent(searchTerms.trim())+"&orientation=landscape", 
        headers: {'Authorization': 'Client-ID 97423488771722bb245a375da7e5605d91f27f4376a32aa808edb71abb2c4e74'},
        success : onSuccess, 
        error: onError
@@ -14,16 +19,25 @@ function searchForPhotos(searchTerms, onSuccess, onError) {
 }
 
 function handleUnsplashResponse(response) {
-    $("#photo-search").children().remove();
-    for (var i = 0; i < response.results.length; ++i) {
-        console.log(response.results[i].urls.regular);
-        $("#photo-search").append("<img src='"+response.results[i].urls.small+"'/>").slideDown(1000);
+    console.log(response);
+    if (response.results.length == 0) {
+        return;
     }
+    
+    let carousel = $("#photo-carousel-elements");
+
+    carousel.empty(); // Clear out any previous carousel items
+    carousel.append("<div class=\"item active\"><img src='"+response.results[0].urls.regular+"'/></div>");
+    
+    for (var i = 1; i < response.results.length; ++i) {
+        carousel.append("<div class=\"item\"><img src='"+response.results[i].urls.regular+"'/></div>");
+    }
+    
+    document.getElementById("photo-carousel").style.display = "block";
+
 }
 
-$("#photo-input").on("change keyup paste mouseup", () => searchForPhotos($("#photo-input").val(), handleUnsplashResponse, (e) => console.log(e)));
-
-
+//$("#photo-input").on("change keyup paste mouseup", () => searchForPhotos($("#photo-input").val(), handleUnsplashResponse, (e) => console.log(e)));
 
 
 

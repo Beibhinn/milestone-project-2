@@ -6,34 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trips & Advice | Travel made easy</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="/" class="navbar-brand">
-                   Trips & Advice
+                <a href="/" class="navbar-brand" id="logo" href="index.html">
+                    <img src="images/logo8.png" alt="Trips & Advice">
                 </a>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-list-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
-
-            <div class="navbar-collapse collapse" id="navbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="/"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href=""><i class="fas fa-plane-departure"></i> Flights</a></li>
-                    <li><a href=""><i class="fas fa-lightbulb"></i> Travel Inspiration</a></li>
-                    <li><a href=""><i class="fas fa-camera-retro"></i> Attractions</a></li>
-                    <li><a href=""><i class="fas fa-bed"></i> Accommodation</a></li>
-                    <li><a href=""><i class="fas fa-utensils"></i> Restaraunts</a></li>
-                </ul>
+            <div class="navigation navbar-right">
+                <div class="navbar-collapse collapse navbar-list-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href=""><i class="fas fa-lightbulb"></i> Inspiration</a></li>
+                        <li><a href=""><i class="fas fa-plane"></i> Flights</a></li>
+                        <li><a href=""><i class="fas fa-cloud-sun-rain"></i> Weather</a></li>
+                        <li><a href=""><i class="fas fa-search-location"></i> Nearby</a></li>
+                        <li><a href=""><i class="fas fa-info-circle"></i> Useful Info</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -51,25 +53,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="container">
-            <section class="flights">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="section-header">
-                            <h2>Flights</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div data-skyscanner-widget="SearchWidget" data-origin-geo-lookup="true" data-target="_blank"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="inspiration">
         <section class="inspiration">
             <div class="row">
                 <div class="section-header col-xs-12">
@@ -101,8 +85,8 @@
                             <img src="images/photo4.jpg">
                             <div class="text">Wiang Kum Kam, ตำบล ช้างเผือก, Thailand</div>
                         </div>
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="carousel-control left" id="prev" onclick="plusSlides(-1)"><span class="glyphicon glyphicon-chevron-left"></span></a> 
+                        <a class="carousel-control right" id="next" onclick="plusSlides(1)"><span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                     <br>
                     <div style="text-align:center">
@@ -128,20 +112,107 @@
                     <div class="row">
                         <div class="content col-xs-12">
                             <input type="text" id="photo-input" name="photo-search" placeholder="Location">
+                            <div>
+                                <button class="btn btn-info submit" onclick="onPhotoSearchSubmit()">Submit</button>
+                            </div>
                         </div>
                     </div>
-                    <div id="photo-search">
-
+                    <div id="photo-carousel" class="carousel slide" style="display: none">
+                        <!-- Wrapper for carousel items -->
+                        <div id="photo-carousel-elements" class="carousel-inner"></div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left" href="#photo-carousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="carousel-control right" href="#photo-carousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid color2">
+        <div class="container">
+            <section class="flights">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-header">
+                            <h2>Flights</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div data-skyscanner-widget="SearchWidget" data-origin-geo-lookup="true" data-target="_blank"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <section class="weather">
+            <div class="row">
+                <div class="section-header col-xs-12">
+                    <h2>Weather</h2>
+                </div>
+                <div class="content">
+                    <p>Not sure what to pack? Look up the weather for your destination here, so you know whether to pack your swimsuit and shades or your coat and scarf!</p>
+                </div>
+                <div class="row">
+                    <div class="content col-xs-12">
+                        <input type="text" id="weather-input" name="weather-search" placeholder="Location">
+                        <div>
+                            <button class="btn btn-info submit" onclick="onWeatherSubmit()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="weather-results">
+                    <div class="results-location"></div>
+                    <div class="weather-container weather1">
+                        <div class="date"></div>
+                        <img class="icon"/>
+                        <div class="description"></div>
+                        <div class="maxtemp"></div>
+                        <div class="mintemp"></div>
+                    </div>
+                    <div class="weather-container weather2">
+                        <div class="date"></div>
+                        <img class="icon"/>
+                        <div class="description"></div>
+                        <div class="maxtemp"></div>
+                        <div class="mintemp"></div>
+                    </div>
+                    <div class="weather-container weather3">
+                        <div class="date"></div>
+                        <img class="icon"/>
+                        <div class="description"></div>
+                        <div class="maxtemp"></div>
+                        <div class="mintemp"></div>
+                    </div>
+                    <div class="weather-container weather4">
+                        <div class="date"></div>
+                        <img class="icon"/>
+                        <div class="description"></div>
+                        <div class="maxtemp"></div>
+                        <div class="mintemp"></div>
+                    </div>
+                    <div class="weather-container weather5">
+                        <div class="date"></div>
+                        <img class="icon"/>
+                        <div class="description"></div>
+                        <div class="maxtemp"></div>
+                        <div class="mintemp"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container-fluid color3">
         <section class="attractions">
             <div class="row">
                 <div class="section-header col-xs-12">
-                    <h2>Attractions</h2>
+                    <h2>Nearby</h2>
                 </div>
             </div>
             <div class="row">
@@ -154,22 +225,22 @@
                             <input type="text" id="search-bar" name="location-search" placeholder="Location">
                             <div class="radios">
                                 <input type="radio" name="search" value="All"> All
-                                <input type="radio" name="search" value="Attractions"> Attractions
-                                <input type="radio" name="search" value="Accommodation"> Accommodation
-                                <input type="radio" name="search" value="Restaraunts"> Restaraunts
+                                <input type="radio" name="search" value="Attractions" id="attractions"> Attractions
+                                <input type="radio" name="search" value="Accommodation" id="accommodation"> Accommodation
+                                <input type="radio" name="search" value="Restaraunts" id="restaurants"> Restaraunts
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-6">
                     <div id="map"></div>
-                
+
 
                 </div>
             </div>
         </section>
     </div>
-    
+
     <footer>
         <div class="container-fluid">
             <div class="row">
@@ -192,6 +263,7 @@
     <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
     <script src="js/unsplash.js"></script>
     <script src="js/photos.js"></script>
+    <script src="js/weather.js"></script>
     <script src="js/maps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvDpFql1B498CuRVJLArVt3Bf_tAcaDnc&callback=initMap&libraries=places" async defer></script>
 
