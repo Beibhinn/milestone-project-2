@@ -99,40 +99,7 @@ div.jumbotron {
     height: 80vh;
 }
 
-
-
-
-
-
-
-
-/*------------------------------------------------Flights */
-
-.color2 {
-    background-color: #d6fff6;
-}
-
-.flights {
-    padding-bottom: 20px;
-}
-
-.section-header {
-    text-align: center;
-}
-
-label>span {
-    font-size: medium;
-}
-
-label.bpk-radio>#text {
-    font-size: small;
-}
-
-
-
-
-
-/*------------------------------------------------Photos */
+/*------------------------------------------------Inspiration */
 
 #inspiration {
     padding-bottom: 20px;
@@ -268,7 +235,68 @@ img {
 }
 
 
-/*------------------------------------------------Attractions */
+
+/*------------------------------------------------Flights */
+
+.color2 {
+    background-image: linear-gradient(to right, #d6fff6, #d6f6ff);
+}
+
+.flights {
+    padding-bottom: 20px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+label>span {
+    font-size: medium;
+}
+
+label.bpk-radio>#text {
+    font-size: small;
+}
+
+/*------------------------------------------------Weather */
+
+#weather-results {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+
+#results-location {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#weather-box {
+    transition: 0.5 ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    padding-left: 10%;
+}
+
+.weather-container {
+    display: inline-block;
+    border-color: #054a91;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    height: 200px;
+}
+
+.weather-container>div,
+.weather-container>img {
+    padding-top: 5px;
+}
+
+/*------------------------------------------------Nearby */
 
 .color3 {
     background-color: #4dccbd;
@@ -297,9 +325,9 @@ img {
 }
 
 
-/*------------------------------------------------Accommodation */
+/*------------------------------------------------Useful Info */
 
-/*------------------------------------------------Restaraunts */
+
 
 /*------------------------------------------------Footer */
 

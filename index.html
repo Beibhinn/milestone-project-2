@@ -159,50 +159,52 @@
                 <div class="content">
                     <p>Not sure what to pack? Look up the weather for your destination here, so you know whether to pack your swimsuit and shades or your coat and scarf!</p>
                 </div>
-                <div class="row">
-                    <div class="content col-xs-12">
-                        <input type="text" id="weather-input" name="weather-search" placeholder="Location">
-                        <div>
-                            <button class="btn btn-info submit" onclick="onWeatherSubmit()">Submit</button>
-                        </div>
+                <div class="content col-xs-12">
+                    <input type="text" id="weather-input" name="weather-search" placeholder="Location">
+                    <div>
+                        <button class="btn btn-info submit" onclick="onWeatherSubmit()">Submit</button>
                     </div>
                 </div>
-                <div id="weather-results">
-                    <div class="results-location"></div>
-                    <div class="weather-container weather1">
-                        <div class="date"></div>
-                        <img class="icon"/>
-                        <div class="description"></div>
-                        <div class="maxtemp"></div>
-                        <div class="mintemp"></div>
-                    </div>
-                    <div class="weather-container weather2">
-                        <div class="date"></div>
-                        <img class="icon"/>
-                        <div class="description"></div>
-                        <div class="maxtemp"></div>
-                        <div class="mintemp"></div>
-                    </div>
-                    <div class="weather-container weather3">
-                        <div class="date"></div>
-                        <img class="icon"/>
-                        <div class="description"></div>
-                        <div class="maxtemp"></div>
-                        <div class="mintemp"></div>
-                    </div>
-                    <div class="weather-container weather4">
-                        <div class="date"></div>
-                        <img class="icon"/>
-                        <div class="description"></div>
-                        <div class="maxtemp"></div>
-                        <div class="mintemp"></div>
-                    </div>
-                    <div class="weather-container weather5">
-                        <div class="date"></div>
-                        <img class="icon"/>
-                        <div class="description"></div>
-                        <div class="maxtemp"></div>
-                        <div class="mintemp"></div>
+            </div>
+            <div class="row">
+                <div id="weather-results" class="container-fluid">
+                    <div id="results-location"></div>
+                    <div id="weather-box" class="container row" style= "display: none">
+                        <div class="weather-container weather1 col-xs-6 col-xs-offset-3 col-sm-2">
+                            <div class="date"></div>
+                            <img class="icon"/>
+                            <div class="description"></div>
+                            <div class="maxtemp"></div>
+                            <div class="mintemp"></div>
+                        </div>
+                        <div class="weather-container weather2 col-xs-6 col-xs-offset-3 col-sm-2">
+                            <div class="date"></div>
+                            <img class="icon"/>
+                            <div class="description"></div>
+                            <div class="maxtemp"></div>
+                            <div class="mintemp"></div>
+                        </div>
+                        <div class="weather-container weather3 col-xs-6 col-xs-offset-3 col-sm-2">
+                            <div class="date"></div>
+                            <img class="icon"/>
+                            <div class="description"></div>
+                            <div class="maxtemp"></div>
+                            <div class="mintemp"></div>
+                        </div>
+                        <div class="weather-container weather4 col-xs-6 col-xs-offset-3 col-sm-2">
+                            <div class="date"></div>
+                            <img class="icon"/>
+                            <div class="description"></div>
+                            <div class="maxtemp"></div>
+                            <div class="mintemp"></div>
+                        </div>
+                        <div class="weather-container weather5 col-xs-6 col-xs-offset-3 col-sm-offset-5 col-sm-2">
+                            <div class="date"></div>
+                            <img class="icon"/>
+                            <div class="description"></div>
+                            <div class="maxtemp"></div>
+                            <div class="mintemp"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -240,7 +242,40 @@
             </div>
         </section>
     </div>
-
+    <div class="container-fluid">
+        <section id="useful-info">
+            <div class="row">
+                <div class="section-header col-xs-12">
+                    <h2>Useful Information</h2>
+                </div>
+                <div class="content">
+                    <p>Find out a little more about your destination before you go.</p>
+                </div>
+                <div class="content col-xs-12">
+                    <input type="text" id="info-input" name="info-search" placeholder="Country">
+                    <div>
+                        <button class="btn btn-info submit" onclick="onInfoSubmit()">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="info-results" class="container" style="display: none">
+                    <div class="name"></div>
+                    <div class="region"></div>
+                    <div class="subregion"></div>
+                    <div class="timezones"></div>
+                    <div class="capital"></div>
+                    <div class="population"></div>
+                    <div class="languages">
+                        <div class="language"></div>
+                        <div class="language"></div>
+                    </div>
+                    <div class="currencies"></div>
+                    <img class="flag col-xs-3"></img>
+                </div>
+            </div>
+        </section>
+    </div>
     <footer>
         <div class="container-fluid">
             <div class="row">
@@ -266,6 +301,7 @@
     <script src="js/weather.js"></script>
     <script src="js/maps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvDpFql1B498CuRVJLArVt3Bf_tAcaDnc&callback=initMap&libraries=places" async defer></script>
+    <script src="js/info.js"></script>
 
 
 </body>
