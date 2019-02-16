@@ -85,7 +85,7 @@
                             <img src="images/photo4.jpg">
                             <div class="text">Wiang Kum Kam, ตำบล ช้างเผือก, Thailand</div>
                         </div>
-                        <a class="carousel-control left" id="prev" onclick="plusSlides(-1)"><span class="glyphicon glyphicon-chevron-left"></span></a> 
+                        <a class="carousel-control left" id="prev" onclick="plusSlides(-1)"><span class="glyphicon glyphicon-chevron-left"></span></a>
                         <a class="carousel-control right" id="next" onclick="plusSlides(1)"><span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                     <br>
@@ -169,38 +169,38 @@
             <div class="row">
                 <div id="weather-results" class="container-fluid">
                     <div id="results-location"></div>
-                    <div id="weather-box" class="container row" style= "display: none">
+                    <div id="weather-box" class="container row" style="display: none">
                         <div class="weather-container weather1 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon"/>
+                            <img class="icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather2 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon"/>
+                            <img class="icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather3 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon"/>
+                            <img class="icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather4 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon"/>
+                            <img class="icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather5 col-xs-6 col-xs-offset-3 col-sm-offset-5 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon"/>
+                            <img class="icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
@@ -259,19 +259,45 @@
                 </div>
             </div>
             <div class="row">
-                <div id="info-results" class="container" style="display: none">
-                    <div class="name"></div>
-                    <div class="region"></div>
-                    <div class="subregion"></div>
-                    <div class="timezones"></div>
-                    <div class="capital"></div>
-                    <div class="population"></div>
-                    <div class="languages">
-                        <div class="language"></div>
-                        <div class="language"></div>
-                    </div>
-                    <div class="currencies"></div>
-                    <img class="flag col-xs-3"></img>
+                <div class="container" id="info">
+                    <table id="info-results" class="col-md-6 col-md-offset-3" style="display: none">
+                        <tr>
+                            <th>Country:</th>
+                            <td class="name"></td>
+                        </tr>
+                        <tr>
+                            <th>Region:</th>
+                            <td class="region"></td>
+                        </tr>
+                        <tr>
+                            <th>Subregion:</th>
+                            <td class="subregion"></td>
+                        </tr>
+                        <tr>
+                            <th>Timezones:</th>
+                            <td class="timezones"></td>
+                        </tr>
+                        <tr>
+                            <th>Capital:</th>
+                            <td class="capital"></td>
+                        </tr>
+                        <tr>
+                            <th>Population:</th>
+                            <td class="population"></td>
+                        </tr>
+                        <tr>
+                            <th>Languages:</th>
+                            <td class="languages"></td>
+                        </tr>
+                        <tr>
+                            <th>Currencies:</th>
+                            <td class="currencies"></td>
+                        </tr>
+                        <tr>
+                            <th>Flag:</th>
+                            <td class="flags col-xs-3"><img class="flag"></img></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </section>

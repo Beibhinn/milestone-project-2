@@ -299,9 +299,10 @@ label.bpk-radio>#text {
 /*------------------------------------------------Nearby */
 
 .color3 {
-    background-color: #4dccbd;
+    background-image: linear-gradient(to right, #4dccbd, #4dcc9b);
+   /* background-color: #4dccbd; */
     color: #054a91;
-}
+} 
 
 .attractions {
     padding-bottom: 20px;
@@ -327,7 +328,22 @@ label.bpk-radio>#text {
 
 /*------------------------------------------------Useful Info */
 
+#info-results {
+    text-align: center;
+}
 
+
+tr>th {
+    width: 5%;
+}
+
+th {
+    text-align: right;
+}
+
+img.flag {
+    width: 100%;
+}
 
 /*------------------------------------------------Footer */
 
