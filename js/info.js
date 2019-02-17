@@ -1,6 +1,5 @@
 /*global $*/
 
-
 function searchForInfo(searchTerms, onSuccess, onError) {
     if (searchTerms.trim().length < 4) {
         return;
@@ -13,8 +12,8 @@ function searchForInfo(searchTerms, onSuccess, onError) {
     });
 }
 
-function onInfoSubmit() {
-    searchForInfo($("#info-input").val(), handleInfoResponse, (e) => console.log(e));
+function onInfoSubmit(country) {
+    searchForInfo(country, handleInfoResponse, (e) => console.log(e));
 }
 
 /* function handleInfoResponse(response) {
