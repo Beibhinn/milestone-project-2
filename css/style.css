@@ -340,6 +340,13 @@ label.bpk-radio>#text {
 
 /*------------------------------------------------Useful Info */
 
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+
 #info-results {
     text-align: center;
 }

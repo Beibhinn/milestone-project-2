@@ -213,8 +213,8 @@
                     <input id="weather-date" type="date" name="date" min="2015-01-01">
                     <button class="btn btn-info submit" onclick="onDateSubmit()">Submit</button>
                 </div>
-                <div id="weather-history" class="container-fluid" style="display: none">
-                    <div id="history-box" class="weather-container col-xs-12 col-md-6 col-md-offset-3">
+                <div id="weather-history" class="container-fluid">
+                    <div id="history-box" class="weather-container col-xs-12 col-md-6 col-md-offset-3" style="display: none">
                         <div class="date history"></div>
                         <img class="icon history" />
                         <div class="description history"></div>
@@ -225,6 +225,7 @@
                         <div class="avghumidity history"></div>
                         <div class="totalprecip history"></div>
                     </div>
+                    <div id="history-fail" class="weather-container" style="display: none"> Sorry, we don't seem to know what the weather was like that day! please try a different date.</div>
                 </div>
 
             </div>
@@ -246,9 +247,10 @@
                         <div id="map-search">
                             <input type="text" id="search-bar" name="location-search" placeholder="Location">
                             <div class="radios">
-                                <input type="radio" name="search" value="All"> All
-                                <input type="radio" name="search" value="Attractions" id="attractions"> Attractions
                                 <input type="radio" name="search" value="Accommodation" id="accommodation"> Accommodation
+                                <input type="radio" name="search" value="Attractions" id="attractions"> Attractions
+                                <input type="radio" name="search" value="Bars" id="bars"> Bars
+                                <input type="radio" name="search" value="Cafes" id="cafes"> Cafés
                                 <input type="radio" name="search" value="Restaraunts" id="restaurants"> Restaraunts
                             </div>
                         </div>
@@ -282,7 +284,7 @@
                     <div class="dropdown btn-group">
                         <button type="button" class="btn btn-info dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Country</button>
-                        <div id="country-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div id="country-dropdown" class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton">
                         </div>
                     </div>
                 </div>
