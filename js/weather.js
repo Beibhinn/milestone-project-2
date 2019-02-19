@@ -17,6 +17,12 @@ function onWeatherSubmit() {
     searchForWeather($("#weather-input").val(), handleWeatherResponse, (e) => console.log(e));
 }
 
+$("#weather-input").on('keypress',function(e) {
+    if(e.which == 13) {
+        onWeatherSubmit();
+    }
+});
+
 function handleWeatherResponse(response) {
     console.log(response);
     let weather = $("#weather-results");
@@ -38,10 +44,11 @@ function handleWeatherResponse(response) {
         wc.children(".maxtemp").text("Max: " + forecastday.day.maxtemp_c + "°C");
         wc.children(".mintemp").text("Min: " + forecastday.day.mintemp_c + "°C");
     }
-    document.getElementById("weather-box").style.display = "inline-block";
-    document.getElementById("history-search").style.display = "block";
+     // document.getElementById("weather-box").style.display = "inline-block";
+     // document.getElementById("history-search").style.display = "block";
+     $("#weather-box").show("slow", "linear").addClass("shown");
+     $("#history-search").show("fast", "linear");
 }
-
 
 
 
@@ -73,8 +80,8 @@ function handleHistoryResponse(response) {
     let forecastday = response.forecast.forecastday[0];
     
     if(forecastday){
-            weather.show();
-            $("#history-fail").hide();
+            weather.show("slow", "linear");
+            $("#history-fail").hide("fast", "linear");
             let condition = forecastday.day.condition;
             
             weather.children(".date").text(forecastday.date);
@@ -88,8 +95,8 @@ function handleHistoryResponse(response) {
             weather.children(".totalprecip").text("Total Precipitation: " + forecastday.day.totalprecip_mm + "mm");
     }
     else {
-        weather.hide();
-        $("#history-fail").show();
+        weather.hide("fast", "linear");
+        $("#history-fail").show("slow", "linear");
     }
     // document.getElementById("weather-history").style.display = "inline-block";
 }
