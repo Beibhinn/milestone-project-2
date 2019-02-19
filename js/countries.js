@@ -4,10 +4,10 @@ window.onload = function() {
   initCountries();
   let dropdown = $("#country-dropdown");
   for(var i = 0; i < countries.length; ++i) {
-    dropdown.append("<a class=\"dropdown-item\">" +countries[i]+ "</a> <br>");
+    dropdown.append(`<div data-country=${countries[i]}><a class="dropdown-item">${countries[i]}</a></div>`);
   }
   dropdown.children().click(function() {
-    onInfoSubmit(this.text);
+    onInfoSubmit(this.dataset.country);
   })
 };
 

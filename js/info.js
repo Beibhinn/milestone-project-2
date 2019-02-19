@@ -13,8 +13,10 @@ function searchForInfo(searchTerms, onSuccess, onError) {
 }
 
 function onInfoSubmit(country) {
+    console.log(`About to seach for info for: ${country}`);
     searchForInfo(country, handleInfoResponse, (e) => console.log(e));
 }
+
 
 /* function handleInfoResponse(response) {
     console.log(response);
@@ -78,5 +80,6 @@ function handleInfoResponse(response) {
     pic.attr("src", infoResponse.flag);
     
     
-    document.getElementById("info-results").style.display = "inline-block";
+    //document.getElementById("info-results").style.display = "inline-block";
+    $("#info-results").show("slow", "linear").addClass("shown");
 }
