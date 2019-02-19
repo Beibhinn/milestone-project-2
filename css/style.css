@@ -1,8 +1,11 @@
+
+
 /* 054a91
 d6fff6
 231651
 4dccbd
-ff8484 */
+ff8484  */
+
 
 html, body {
   width: 100%;
@@ -20,12 +23,14 @@ body {
 /*------------------------------------------------Navbar */
 
 nav {
-    -webkit-box-shadow: 0 20px 8px -8px #999;
-    -moz-box-shadow: 0 20px 18px -18px #999;
-    box-shadow: 0 20px 18px -18px #999;
+    -webkit-box-shadow: 0 7px 10px #050505b3;
+    -moz-box-shadow: 0 7px 10px #050505b3;
+    box-shadow: 0 7px 10px #050505b3; 
     height: 110px;
-    background-color: #231651;
+    background-color: #151650;
     border-color: #4dccbd;
+    top: 0;
+    transition: top 1.5s;
 }
 
 #logo {
@@ -51,8 +56,9 @@ ul.nav {
 
 ul.nav>li>a {
     color: #ffffff;
-    font-family: 'Parisienne', cursive;
-    font-size: large;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+    font-size: 15pt;
     transition: 0.5s ease-in-out;
 }
 
@@ -68,6 +74,12 @@ ul.nav>li>a:hover {
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.navbar-collapse {
+    background-color: #151650;
 }
 
 .icon-bar {
@@ -78,25 +90,52 @@ ul.nav>li>a:hover {
 }
 
 .navbar-toggle:hover {
-    background-color: #d6fff6;
-    border: 1px solid #ff8484;
+    background-color: #4dccbd;
+    border: 1px solid #ffffff;
     border-radius: 4px;
 }
 
 .navbar-toggle:hover>.icon-bar {
-    background-color: #ff8484;
+    background-color: #ffffff;
 }
-
 
 /*------------------------------------------------Jumbotron */
 
 div.jumbotron {
-    margin-top: 110px;
     margin-bottom: 0px;
     color: #4dccbd;
     background: url('../images/cover1.jpg');
     background-size: cover;
-    height: 80vh;
+    height: 550px;
+    text-shadow: black 0px 0px 20px;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 550px;
+    width: 100%;
+    background-color: rgba(0, 0, 15, 0.4);
+}
+
+#callout {
+    margin-top: 100px;
+    padding-bottom: 25px;
+}
+
+#callout>h1,
+h3 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+
+.lead {
+    color: #d6fff6;
+}
+
+.text-muted {
+    color: #ffffff;
 }
 
 /*------------------------------------------------Inspiration */
@@ -105,6 +144,14 @@ div.jumbotron {
     padding-bottom: 20px;
     background-color: #ffffff;
     color: #054a91;
+    box-shadow: inset 0px 7px 7px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 30pt;
+    text-shadow: #4dccbd 0px 0px 4px;
 }
 
 .photoSlides>img {
@@ -211,7 +258,8 @@ input {
 
 #photo-input, 
 button.submit,
-#weather-input {
+#weather-input,
+#weather-date {
     margin-bottom: 10px;
 }
 
@@ -235,11 +283,15 @@ img {
 }
 
 
-
 /*------------------------------------------------Flights */
 
 .color2 {
     background-image: linear-gradient(to right, #d6fff6, #d6f6ff);
+    box-shadow: 
+        inset 0px 7px 7px rgba(0, 0, 0, 0.12), 
+        inset 0px -7px 7px rgba(0, 0, 0, 0.12);
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
 .flights {
@@ -248,6 +300,11 @@ img {
 
 .section-header {
     text-align: center;
+}
+
+#skyscanner {
+    width: 70%;
+    margin-left: 15%;
 }
 
 label>span {
@@ -260,10 +317,23 @@ label.bpk-radio>#text {
 
 /*------------------------------------------------Weather */
 
+.weather {
+    color: #054a91;
+}
+
+
+.content>p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
 #weather-results {
     text-align: center;
     padding: 0;
     margin-bottom: 15px;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 
@@ -273,25 +343,49 @@ label.bpk-radio>#text {
 }
 
 #weather-box {
-    transition: 0.5 ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    padding-left: 10%;
+    transition: 1 ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.shown {
+    display: inline-block;
 }
 
 .weather-container {
     display: inline-block;
-    border-color: #054a91;
-    border-style: solid;
-    border-width: 3px;
+    box-shadow: 
+        0px -7px 7px rgba(0, 0, 0, 0.12),
+        0px 7px 7px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
     margin: 5px;
     text-align: center;
-    height: 200px;
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 225px;
 }
 
 .weather-container>div,
+.weather-container>img {
+    transition: 1 ease-in-out;
+    -moz-transition: all 1 ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+
+
+.weather5 {
+    margin-left: 27.5%;
+    margin-right: 27.5%;
+}
+
+.weather-container>.date {
+    padding-top: 10px;
+}
+
 .weather-container>img {
     padding-top: 5px;
 }
@@ -304,28 +398,48 @@ label.bpk-radio>#text {
     width: 50%;
     height: 25%;
     margin-left: 25%;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
 }
 
+#history-fail {
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-bottom: 15px;
+}
 
-
+@media (min-width: 992px) {
+    .weather-container {
+        width: 15%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        height: 220px;
+    }
+}
 /*------------------------------------------------Nearby */
 
 .color3 {
     background-image: linear-gradient(to right, #4dccbd, #4dcc9b);
    /* background-color: #4dccbd; */
     color: #054a91;
+    box-shadow: 
+        inset 0px 7px 7px rgba(0, 0, 0, 0.12), 
+        inset 0px -7px 7px rgba(0, 0, 0, 0.12);
+    margin-left: -5px;
+    margin-right: -5px;
 } 
 
-.attractions {
+.nearby {
     padding-bottom: 20px;
 }
 
 .search {
-    min-height: 500px;
     vertical-align: middle;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 15px;
 }
 
 #search-container {
@@ -333,12 +447,31 @@ label.bpk-radio>#text {
     vertical-align: middle;
 }
 
-#map {
-    border-radius: 20px;
+#search-bar {
+    margin-bottom: 10px;
+    width: 200px;
 }
 
+.radios {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#map {
+    border-radius: 20px;
+    min-height: 500px;
+}
+
+@media (min-width: 768px) {
+    .search {
+        min-height: 500px;
+    }
+}
 
 /*------------------------------------------------Useful Info */
+
+#useful-info {
+    padding-bottom: 15px;
+}
 
 .scrollable-menu {
     height: auto;
@@ -346,14 +479,30 @@ label.bpk-radio>#text {
     overflow-x: hidden;
 }
 
-
-#info-results {
-    text-align: center;
+#country-dropdown>div:hover {
+    background-color: #d6fff6;
+    color: #151650;
 }
 
+#country-dropdown>div:hover >a {
+    color: #151650;
+}
+
+#country-dropdown>div>a:hover {
+    color: #151650;
+    text-decoration: none;
+}
+
+tr {
+    padding-bottom: 2px;
+}
 
 tr>th {
     width: 5%;
+}
+
+td {
+    padding: 5px;
 }
 
 th {
@@ -362,16 +511,36 @@ th {
 
 img.flag {
     width: 100%;
+    box-shadow: 
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 -4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/*------------------------------------------------Bottom Photo */
+
+#photo-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    box-shadow: 0px -7px 7px rgba(0, 0, 0, 0.12);
+}
+
+
+.bottom-photo {
+    background: url('../images/cover3.jpg') center center;
+    background-size: cover;
+    height: 400px;
+    padding-bottom: 50px;
 }
 
 /*------------------------------------------------Footer */
 
 footer {
     padding: 15px;
-    background-color: #231651;
-    -webkit-box-shadow: 0 -2px 6px #999;
-    -moz-box-shadow: 0 -2px 6px #999;
-    box-shadow: 0 -2px 6px #999;
+    background-color: #151650;
+    -webkit-box-shadow: 0 -7px 10px #050505b3;
+    -moz-box-shadow:0 -7px 10px #050505b3;
+    box-shadow: 0 -7px 10px #050505b3;
 }
 
 ul.footer {
@@ -388,8 +557,9 @@ ul.footer {
 
 ul.footer>li>a {
     color: #ffffff;
-    font-family: 'Parisienne', cursive;
-    font-size: medium;
+    font-family: 'Dancing Script', cursive;
+    font-size: 12pt;
+    font-weight: 600;
     transition: 0.5s ease-in-out;
 }
 
@@ -404,8 +574,3 @@ ul.footer>li>a:hover {
 
 
 
-/*-----------------------------------------------Scripts*/
-
-div#map {
-    min-height: 500px;
-}

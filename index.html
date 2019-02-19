@@ -6,43 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trips & Advice | Travel made easy</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth|Dancing+Script|Montserrat+Alternates" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top" id="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="/" class="navbar-brand" id="logo" href="index.html">
+                <a href="index.html" class="navbar-brand" id="logo" href="index.html">
                     <img src="images/logo8.png" alt="Trips & Advice">
                 </a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-list-collapse">
+                <div align="right" display="inline-block">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-list-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                </div>
             </div>
             <div class="navigation navbar-right">
                 <div class="navbar-collapse collapse navbar-list-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href=""><i class="fas fa-lightbulb"></i> Inspiration</a></li>
-                        <li><a href=""><i class="fas fa-plane"></i> Flights</a></li>
-                        <li><a href=""><i class="fas fa-cloud-sun-rain"></i> Weather</a></li>
-                        <li><a href=""><i class="fas fa-search-location"></i> Nearby</a></li>
-                        <li><a href=""><i class="fas fa-info-circle"></i> Useful Info</a></li>
+                        <li><a href="#inspiration"><i class="fas fa-lightbulb"></i> Inspiration</a></li>
+                        <li><a href="#flight-search"><i class="fas fa-plane"></i> Flights</a></li>
+                        <li><a href="#weather-section"><i class="fas fa-cloud-sun-rain"></i> Weather</a></li>
+                        <li><a href="#nearby-section"><i class="fas fa-search-location"></i> Nearby</a></li>
+                        <li><a href="#info-section"><i class="fas fa-info-circle"></i> Useful Info</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
     <div class="jumbotron jumbotron-fluid text-center">
+        <div class="opaque-overlay">&nbsp;</div>
         <div class="row">
             <div class="col-xs-12">
-                <section class="container-fluid">
+                <section class="container" id="callout">
                     <h1>Trips & Advice</h1>
                     <p class="lead">Escape the daily grind and take a trip! <br> We make choosing your next destination easy, and we're always happy to provide travel tips and advice.</p>
 
@@ -132,7 +134,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid color2">
+    <div class="container-fluid color2" id="flight-search">
         <div class="container">
             <section class="flights">
                 <div class="row">
@@ -143,14 +145,14 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <div data-skyscanner-widget="SearchWidget" data-origin-geo-lookup="true" data-target="_blank"></div>
+                            <div data-skyscanner-widget="SearchWidget" data-origin-geo-lookup="true" data-target="_blank" id="skyscanner"></div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="weather-section">
         <section class="weather">
             <div class="row">
                 <div class="section-header col-xs-12">
@@ -162,7 +164,7 @@
                 <div class="content col-xs-12">
                     <input type="text" id="weather-input" name="weather-search" placeholder="Location">
                     <div>
-                        <button class="btn btn-info submit" onclick="onWeatherSubmit()">Submit</button>
+                        <button class="btn btn-info submit" id="weather-submit" onclick="onWeatherSubmit()">Submit</button>
                     </div>
                 </div>
             </div>
@@ -211,7 +213,9 @@
             <div class="row">
                 <div id="history-search" class="content" style="display: none">
                     <input id="weather-date" type="date" name="date" min="2015-01-01">
-                    <button class="btn btn-info submit" onclick="onDateSubmit()">Submit</button>
+                    <div>
+                        <button class="btn btn-info submit" onclick="onDateSubmit()">Submit</button>
+                    </div>
                 </div>
                 <div id="weather-history" class="container-fluid">
                     <div id="history-box" class="weather-container col-xs-12 col-md-6 col-md-offset-3" style="display: none">
@@ -225,14 +229,14 @@
                         <div class="avghumidity history"></div>
                         <div class="totalprecip history"></div>
                     </div>
-                    <div id="history-fail" class="weather-container" style="display: none"> Sorry, we don't seem to know what the weather was like that day! please try a different date.</div>
+                    <div id="history-fail" class="weather-container" style="display: none"> Sorry, we don't seem to know the weather for that day! Please try a different date.</div>
                 </div>
 
             </div>
         </section>
     </div>
-    <div class="container-fluid color3">
-        <section class="attractions">
+    <div class="container-fluid color3" id="nearby-section">
+        <section class="nearby">
             <div class="row">
                 <div class="section-header col-xs-12">
                     <h2>Nearby</h2>
@@ -241,8 +245,8 @@
             <div class="row">
                 <div class="content search col-xs-12 col-lg-6">
                     <div id="search-container">
-                        <div>
-                            Please enter a location to search for attractions, accommodation and restaraunts.
+                        <div class="content">
+                            <p>Please enter a location to search for attractions, accommodation and restaraunts.</p>
                         </div>
                         <div id="map-search">
                             <input type="text" id="search-bar" name="location-search" placeholder="Location">
@@ -264,7 +268,7 @@
             </div>
         </section>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="info-section">
         <section id="useful-info">
             <div class="row">
                 <div class="section-header col-xs-12">
@@ -282,7 +286,7 @@
                 </div> -->
                 <div align="center">
                     <div class="dropdown btn-group">
-                        <button type="button" class="btn btn-info dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-info submit dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Country</button>
                         <div id="country-dropdown" class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton">
                         </div>
@@ -334,16 +338,16 @@
             </div>
         </section>
     </div>
+    <div id="photo-container" class="container-fluid">
+        <section class="bottom-photo">
+
+        </section>
+    </div>
     <footer>
         <div class="container-fluid">
             <div class="row">
                 <ul class="footer col-xs-12">
-                    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href=""><i class="fas fa-plane-departure"></i> Flights</a></li>
-                    <li><a href=""><i class="fas fa-lightbulb"></i> Travel Inspiration</a></li>
-                    <li><a href=""><i class="fas fa-camera-retro"></i> Attractions</a></li>
-                    <li><a href=""><i class="fas fa-bed"></i> Accommodation</a></li>
-                    <li><a href=""><i class="fas fa-utensils"></i> Restaraunts</a></li>
+                    <li><a href="/"><i class="fab fa-github"></i></i> Site hosted by GitHub Pages. </a></li>
                 </ul>
             </div>
         </div>
@@ -352,6 +356,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
