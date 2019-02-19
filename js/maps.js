@@ -59,6 +59,12 @@ function searchForPlaces() {
   console.log("Find place search: " + value);
 }
 
+$("#search-bar").on('keypress',function(e) {
+    if(e.which == 13) {
+        searchForPlaces();
+    }
+});
+
 function handlePlaceQueryResult(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
