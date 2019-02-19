@@ -4,6 +4,12 @@ function onPhotoSearchSubmit() {
     searchForPhotos($("#photo-input").val(), handleUnsplashResponse, (e) => console.log(e));
 }
 
+$("#photo-input").on('keypress',function(e) {
+    if(e.which == 13) {
+        onPhotoSearchSubmit();
+    }
+});
+
 
 function searchForPhotos(searchTerms, onSuccess, onError) {
     if (searchTerms.trim().length < 4) {
@@ -33,7 +39,8 @@ function handleUnsplashResponse(response) {
         carousel.append("<div class=\"item\"><img src='"+response.results[i].urls.regular+"'/></div>");
     }
     
-    document.getElementById("photo-carousel").style.display = "block";
+    // document.getElementById("photo-carousel").style.display = "block";
+    $("#photo-carousel").fadeIn(800);
 
 }
 
