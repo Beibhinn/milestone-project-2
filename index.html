@@ -28,6 +28,7 @@
                 </div>
             </div>
             <div class="navigation navbar-right">
+                <!--Custom navbar collapse also created with Javascript, used with bootstrap collaps to free up real estate-->
                 <div class="navbar-collapse collapse navbar-list-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#inspiration"><i class="fas fa-lightbulb"></i> Inspiration</a></li>
@@ -41,6 +42,7 @@
         </div>
     </nav>
     <div class="jumbotron jumbotron-fluid text-center">
+        <!--Opaque overlay added to make text more readable over the background photo-->
         <div class="opaque-overlay">&nbsp;</div>
         <div class="row">
             <div class="col-xs-12">
@@ -64,6 +66,8 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
+                    <!-- Custom carousel. While the default bootstrap caroussel was not used to create this, 
+                    the bootstrap carousel controls were used to maintain a consistent look between this carousel and the bootstrap one used with the unspalsh API below.-->
                     <div class="slideshow-container">
                         <div class="photoSlides fade">
                             <div class="numbers">1 / 4</div>
@@ -135,6 +139,8 @@
         </div>
     </div>
     <div class="container-fluid color2" id="flight-search">
+        <!-- This utilises a pre-made skyscanner widget, styled with CSS, not an api that had to be incorporated with custom javascript. 
+        The API also exists but is only available for a fee. The widget is sufficient for the purpose of this project.-->
         <div class="container">
             <section class="flights">
                 <div class="row">
@@ -212,7 +218,9 @@
                 </div>
             </div>
             <div class="row">
-                <div id="history-search" class="content" style="display: none">
+                <div id="history-search" class="content" style="display: none"> 
+                    <!-- Date input only appears after a location has already been searched for, as location is also a requirement for the history feature. 
+                    This allows the user to choose location, then narrow down again by date-->
                     <input id="weather-date" type="date" name="date" min="2015-01-01">
                     <div>
                         <button class="btn btn-info submit" onclick="onDateSubmit()">Submit</button>
@@ -261,6 +269,7 @@
                         </div> -->
                         <div id="map-search">
                             <div>
+                                <!-- search bar must be wide enough that the user gets enough details to choose the correct option with the autocomplete-->
                                 <input type="text" id="search-bar" name="location-search" placeholder="Location">
                             </div>
                             <!--
@@ -276,6 +285,7 @@
                             <div class="dropdown btn-group">
                                 <button type="button" class="btn btn-info submit dropdown-toggle type" id="dropdownTypeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 What are you looking for? <span class="caret"></span></button>
+                                <!-- Radio buttons replaced with dropdown menu to provide more search options for the user and more accurate results-->
                                 <div id="type-dropdown" class="dropdown-menu scrollable-menu" aria-labelledby="dropdownTypeButton">
                                     <div><a class="dropdown-item" id="accommodation">Accommodation</a></div>
                                     <div><a class="dropdown-item" id="amusement-parks">Amusement parks</a></div>
@@ -320,13 +330,8 @@
                 <div class="content">
                     <p>Find out a little more about your destination before you go.</p>
                 </div>
-                <!--
-                <div class="content col-xs-12">
-                    <input type="text" id="info-input" name="info-search" placeholder="Country">
-                    <div>
-                        <button class="btn btn-info submit" onclick="onInfoSubmit()">Submit</button>
-                    </div>
-                </div> -->
+                <!-- An input box was replaced with a dropdown so that the user must pick from a select list of countries (which correspond to those supported by the API).
+                This was found to reduce errors caused by user input during testing. -->
                 <div align="center">
                     <div class="dropdown btn-group">
                         <button type="button" class="btn btn-info submit dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

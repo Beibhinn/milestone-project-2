@@ -11,6 +11,7 @@ html, body {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
 }
 
 body {
@@ -113,15 +114,14 @@ div.jumbotron {
     color: #4dccbd;
     background: url('../images/cover1.jpg');
     background-size: cover;
-    height: 550px;
-    text-shadow: black 0px 0px 20px;
+    height: 575px;
 }
 
 .opaque-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    height: 550px;
+    height: 575px;
     width: 100%;
     background-color: rgba(0, 0, 15, 0.4);
 }
@@ -149,6 +149,16 @@ h3 {
 button.submit {
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.12);
     font-family: 'Montserrat Alternates', sans-serif;
+}
+
+@media (min-width: 768px) { 
+    div.jumbotron {
+        height: 550px;
+        text-shadow: black 0px 0px 20px;
+    }
+    .opaque-overlay {
+        height: 550px;
+    }
 }
 
 /*------------------------------------------------Inspiration */
