@@ -55,6 +55,8 @@ function searchForPlaces() {
     fields: ['photos', 'formatted_address', 'name', 'rating', 'opening_hours', 'geometry'],
   };
 
+  
+  $("#alert").hide();
   service.findPlaceFromQuery(request, handlePlaceQueryResult);
   console.log("Find place search: " + value);
 }
@@ -158,7 +160,7 @@ function initAutocomplete() {
       
       google.maps.event.addListener(marker, 'click', function() {
         console.log(place);
-       /* infowindow.setContent(`The place name is ${place.name}. Holy shit it worked.`);*/
+       /* infowindow.setContent(`The place name is ${place.name}.*/
         infowindow.open(map, this);
       });
     
@@ -176,7 +178,9 @@ function initAutocomplete() {
   }
   
 function searchNearby(searchFor) {
+  $("#alert").hide();
   var request = {
+    radius: 700,
     bounds: map.getBounds(),
     zoom: map.getZoom()
   };
@@ -189,18 +193,38 @@ function searchNearby(searchFor) {
   }
    
   function callback(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
+    console.log("Searching nearby");
+    if (results.length === 0) {
+        $("#alert").hide();
+        $("#map").append(`<div id="alert" class="alert alert-warning alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>There doesn't seem to be anything like that nearby. Please try a different search.</div>`);
+    } 
+    else if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMarkers(results);
-    }
+    } 
   }
   service.nearbySearch(request, callback);
 }
 
 
 $("#accommodation").on("click", () => searchNearby('lodging'));
-$("#attractions").on("click", () => searchNearby('attractions'));
+$("#amusement-parks").on("click", () => searchNearby('amusement_park'));
+$("#aquariums").on("click", () => searchNearby('aquarium'));
+$("#art-galleries").on("click", () => searchNearby('art_gallery'));
 $("#bars").on("click", () => searchNearby('bar'));
+$("#bowling-alleys").on("click", () => searchNearby('bowling_alley'));
+$("#bus-stations").on("click", () => searchNearby('bus_station'));
 $("#cafes").on("click", () => searchNearby('cafe'));
+$("#casinos").on("click", () => searchNearby('casino'));
+$("#movie-theaters").on("click", () => searchNearby('movie_theater'));
+$("#museums").on("click", () => searchNearby('museum'));
+$("#night-clubs").on("click", () => searchNearby('night_club'));
+$("#parks").on("click", () => searchNearby('park'));
 $("#restaurants").on("click", () => searchNearby('restaurant'));
-
+$("#shopping-malls").on("click", () => searchNearby('shopping_mall'));
+$("#spas").on("click", () => searchNearby('spa'));
+$("#subway-stations").on("click", () => searchNearby('subway_station'));
+$("#taxi-stands").on("click", () => searchNearby('taxi_stand'));
+$("#train-stations").on("click", () => searchNearby('train_station'));
+$("#zoos").on("click", () => searchNearby('zoo'));
 

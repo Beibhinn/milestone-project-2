@@ -8,7 +8,7 @@ window.onload = function() {
   }
   dropdown.children().click(function() {
     onInfoSubmit(this.dataset.country);
-  })
+  });
 };
 
 function initCountries() {

@@ -50,9 +50,6 @@ nav {
     transition: 1s ease-in-out;
 }
 
-ul.nav {
-    padding-top: 30px;
-}
 
 ul.nav>li>a {
     color: #ffffff;
@@ -99,6 +96,16 @@ ul.nav>li>a:hover {
     background-color: #ffffff;
 }
 
+.navbar-collapse.in {
+    margin-top: -5px;
+}
+
+@media (min-width: 768px) { 
+    ul.nav {
+        padding-top: 30px;
+    }
+}
+
 /*------------------------------------------------Jumbotron */
 
 div.jumbotron {
@@ -122,6 +129,7 @@ div.jumbotron {
 #callout {
     margin-top: 100px;
     padding-bottom: 25px;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #callout>h1,
@@ -138,13 +146,19 @@ h3 {
     color: #ffffff;
 }
 
+button.submit {
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.12);
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
 /*------------------------------------------------Inspiration */
 
 #inspiration {
     padding-bottom: 20px;
     background-color: #ffffff;
     color: #054a91;
-    box-shadow: inset 0px 7px 7px rgba(0, 0, 0, 0.12);
+    /* box-shadow: inset 0px 7px 7px rgba(0, 0, 0, 0.12); */
+    box-shadow: inset 0px 14px 10px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
@@ -254,6 +268,7 @@ h2 {
 input {
     border-radius: 8px;
     text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #photo-input, 
@@ -309,11 +324,22 @@ img {
 
 label>span {
     font-size: medium;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
-label.bpk-radio>#text {
-    font-size: small;
+a.bpk-button,
+div._2Q5YyVOtkLdAcusYyiofsh,
+input.dXDjXIHWpFXVULtU69-q6._3j-Q87aIEAG2gGW6gVkCR0 {
+    font-family: 'Montserrat Alternates', sans-serif;
 }
+
+
+div._31KAFUGo-fXs_-z5ngJ_pt>input._2M51Fh5xcvwmaeuGBgSk1x,
+div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
+    font-size: small;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
 
 /*------------------------------------------------Weather */
 
@@ -449,17 +475,45 @@ label.bpk-radio>#text {
 
 #search-bar {
     margin-bottom: 10px;
-    width: 200px;
+    min-width: 300px;
 }
+
+button.dropdown-toggle {
+    margin-bottom: 0;
+}
+
+#type-dropdown>div:hover {
+    background-color: #deecf7;
+    color: #151650;
+}
+
+#type-dropdown>div:hover >a {
+    color: #151650;
+}
+
+#type-dropdown>div>a:hover {
+    color: #151650;
+    text-decoration: none;
+}
+
 
 .radios {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
+.alert {
+    z-index: 1;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
 #map {
-    border-radius: 20px;
+    border-radius: 20px; 
     min-height: 500px;
 }
+
 
 @media (min-width: 768px) {
     .search {
@@ -480,7 +534,7 @@ label.bpk-radio>#text {
 }
 
 #country-dropdown>div:hover {
-    background-color: #d6fff6;
+    background-color: #deecf7;
     color: #151650;
 }
 
@@ -491,6 +545,10 @@ label.bpk-radio>#text {
 #country-dropdown>div>a:hover {
     color: #151650;
     text-decoration: none;
+}
+
+#info-results {
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 tr {

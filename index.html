@@ -49,8 +49,8 @@
                     <p class="lead">Escape the daily grind and take a trip! <br> We make choosing your next destination easy, and we're always happy to provide travel tips and advice.</p>
 
 
-                    <p class="text-muted"><small>Not sure where to go? Check out our travel inspiration section.</small></p>
-                    <a class="btn btn-info" href="#" role="button">Inspire me</a>
+                    <p class="text-muted"><small>Packing for an upcoming trip? Check the weather and be sure you're packing exactly what you need.</small></p>
+                    <a class="btn btn-info" href="#weather-section" role="button">Take me there</a>
                 </section>
             </div>
         </div>
@@ -160,9 +160,10 @@
                 </div>
                 <div class="content">
                     <p>Not sure what to pack? Look up the weather for your destination here, so you know whether to pack your swimsuit and shades or your coat and scarf!</p>
+                    <p>Enter your city and country here (or city and state, if applicable) and we'll check the forecast for you. Simple!</p>
                 </div>
                 <div class="content col-xs-12">
-                    <input type="text" id="weather-input" name="weather-search" placeholder="Location">
+                    <input type="text" id="weather-input" name="weather-search" placeholder="City, Country">
                     <div>
                         <button class="btn btn-info submit" id="weather-submit" onclick="onWeatherSubmit()">Submit</button>
                     </div>
@@ -248,7 +249,7 @@
                         <div class="content">
                             <p>Please enter a location to search for attractions, accommodation and restaraunts.</p>
                         </div>
-                        <div id="map-search">
+                        <!-- <div id="map-search">
                             <input type="text" id="search-bar" name="location-search" placeholder="Location">
                             <div class="radios">
                                 <input type="radio" name="search" value="Accommodation" id="accommodation"> Accommodation
@@ -257,12 +258,54 @@
                                 <input type="radio" name="search" value="Cafes" id="cafes"> Cafés
                                 <input type="radio" name="search" value="Restaraunts" id="restaurants"> Restaraunts
                             </div>
+                        </div> -->
+                        <div id="map-search">
+                            <div>
+                                <input type="text" id="search-bar" name="location-search" placeholder="Location">
+                            </div>
+                            <!--
+                            <div class="dropdown btn-group">
+                                <select type="button" class="btn btn-info submit dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <option value="" disabled selected>What are you looking for?</option>
+                                    <option value="accommodation">Accommodation</option>
+                                    <option value="bars">Bars</option>
+                                    <span class="caret"></span>
+                                </select>
+                            </div>
+                            -->
+                            <div class="dropdown btn-group">
+                                <button type="button" class="btn btn-info submit dropdown-toggle type" id="dropdownTypeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                What are you looking for? <span class="caret"></span></button>
+                                <div id="type-dropdown" class="dropdown-menu scrollable-menu" aria-labelledby="dropdownTypeButton">
+                                    <div><a class="dropdown-item" id="accommodation">Accommodation</a></div>
+                                    <div><a class="dropdown-item" id="amusement-parks">Amusement parks</a></div>
+                                    <div><a class="dropdown-item" id="aquariums">Aquariums</a></div>
+                                    <div><a class="dropdown-item" id="art-galleries">Art galleries</a></div>
+                                    <div><a class="dropdown-item" id="bars">Bars</a></div>
+                                    <div><a class="dropdown-item" id="bowling-alleys">Bowling alleys</a></div>
+                                    <div><a class="dropdown-item" id="bus-stations">Bus stations</a></div>
+                                    <div><a class="dropdown-item" id="cafes">Cafés</a></div>
+                                    <div><a class="dropdown-item" id="casinos">Casinos</a></div>
+                                    <div><a class="dropdown-item" id="movie-theaters">Movie Theaters</a></div>
+                                    <div><a class="dropdown-item" id="museums">Museums</a></div>
+                                    <div><a class="dropdown-item" id="night-clubs">Night clubs</a></div>
+                                    <div><a class="dropdown-item" id="parks">Parks</a></div>
+                                    <div><a class="dropdown-item" id="restaurants">Restaurants</a></div>
+                                    <div><a class="dropdown-item" id="shopping-malls">Shopping Malls</a></div>
+                                    <div><a class="dropdown-item" id="spas">Spas</a></div>
+                                    <div><a class="dropdown-item" id="subway-stations">Subway stations</a></div>
+                                    <div><a class="dropdown-item" id="taxi-stands">Taxi stands</a></div>
+                                    <div><a class="dropdown-item" id="train-stations">Train stations</a></div>
+                                    <div><a class="dropdown-item" id="zoos">Zoos</a></div>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-6">
-                    <div id="map"></div>
-
+                    <div id="map">
+                        
+                    </div>
 
                 </div>
             </div>
@@ -287,7 +330,7 @@
                 <div align="center">
                     <div class="dropdown btn-group">
                         <button type="button" class="btn btn-info submit dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Country</button>
+                    Country <span class="caret"></span></button>
                         <div id="country-dropdown" class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton">
                         </div>
                     </div>

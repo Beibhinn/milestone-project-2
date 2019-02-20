@@ -6,6 +6,7 @@ var prevPosition = window.pageYOffset;
 
 window.onscroll = function() {
   var currentPosition = window.pageYOffset;
+  $(".navbar-collapse").collapse('hide');
   if (prevPosition > currentPosition) {
     document.getElementById("navbar").style.top = "0";
   } else {
