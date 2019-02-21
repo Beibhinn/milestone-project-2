@@ -58,12 +58,16 @@ function searchForPlaces() {
   
   $("#alert").hide();
   service.findPlaceFromQuery(request, handlePlaceQueryResult);
+  $("#dropdownTypeButton").text('What are you looking for?').append(" <span class=\"caret\"></span>");
+  $("#dropdownTypeButton").val('What are you looking for?');
   console.log("Find place search: " + value);
 }
 
 $("#search-bar").on('keypress',function(e) {
     if(e.which == 13) {
         searchForPlaces();
+        $("#dropdownTypeButton").text('What are you looking for?').append(" <span class=\"caret\"></span>");
+        $("#dropdownTypeButton").val('What are you looking for?');
     }
 });
 
@@ -98,6 +102,7 @@ function initAutocomplete() {
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
   searchBox.addListener('places_changed', function() {
+    $("#alert").hide();
     createMarkers(searchBox.getPlaces());
   });
 }
@@ -206,25 +211,31 @@ function searchNearby(searchFor) {
   service.nearbySearch(request, callback);
 }
 
+function changeButtonText() {
+  $("#type-dropdown div").click(function() {
+    $("#dropdownTypeButton").text($(this).text()).append(" <span class=\"caret\"></span>");
+    $("#dropdownTypeButton").val($(this).text());
+  });
+}
 
-$("#accommodation").on("click", () => searchNearby('lodging'));
-$("#amusement-parks").on("click", () => searchNearby('amusement_park'));
-$("#aquariums").on("click", () => searchNearby('aquarium'));
-$("#art-galleries").on("click", () => searchNearby('art_gallery'));
-$("#bars").on("click", () => searchNearby('bar'));
-$("#bowling-alleys").on("click", () => searchNearby('bowling_alley'));
-$("#bus-stations").on("click", () => searchNearby('bus_station'));
-$("#cafes").on("click", () => searchNearby('cafe'));
-$("#casinos").on("click", () => searchNearby('casino'));
-$("#movie-theaters").on("click", () => searchNearby('movie_theater'));
-$("#museums").on("click", () => searchNearby('museum'));
-$("#night-clubs").on("click", () => searchNearby('night_club'));
-$("#parks").on("click", () => searchNearby('park'));
-$("#restaurants").on("click", () => searchNearby('restaurant'));
-$("#shopping-malls").on("click", () => searchNearby('shopping_mall'));
-$("#spas").on("click", () => searchNearby('spa'));
-$("#subway-stations").on("click", () => searchNearby('subway_station'));
-$("#taxi-stands").on("click", () => searchNearby('taxi_stand'));
-$("#train-stations").on("click", () => searchNearby('train_station'));
-$("#zoos").on("click", () => searchNearby('zoo'));
+$(".accommodation").on("click", () => searchNearby('lodging'), changeButtonText());
+$(".amusement-parks").on("click", () => searchNearby('amusement_park'), changeButtonText());
+$(".aquariums").on("click", () => searchNearby('aquarium'), changeButtonText());
+$(".art-galleries").on("click", () => searchNearby('art_gallery'), changeButtonText());
+$(".bars").on("click", () => searchNearby('bar'), changeButtonText());
+$(".bowling-alleys").on("click", () => searchNearby('bowling_alley'), changeButtonText());
+$(".bus-stations").on("click", () => searchNearby('bus_station'), changeButtonText());
+$(".cafes").on("click", () => searchNearby('cafe'), changeButtonText());
+$(".casinos").on("click", () => searchNearby('casino'), changeButtonText());
+$(".movie-theaters").on("click", () => searchNearby('movie_theater'), changeButtonText());
+$(".museums").on("click", () => searchNearby('museum'), changeButtonText());
+$(".night-clubs").on("click", () => searchNearby('night_club'), changeButtonText());
+$(".parks").on("click", () => searchNearby('park'), changeButtonText());
+$(".restaurants").on("click", () => searchNearby('restaurant'), changeButtonText());
+$(".shopping-malls").on("click", () => searchNearby('shopping_mall'), changeButtonText());
+$(".spas").on("click", () => searchNearby('spa'), changeButtonText());
+$(".subway-stations").on("click", () => searchNearby('subway_station'), changeButtonText());
+$(".taxi-stands").on("click", () => searchNearby('taxi_stand'), changeButtonText());
+$(".train-stations").on("click", () => searchNearby('train_station'), changeButtonText());
+$("#zoos").on("click", () => searchNearby('zoo'), changeButtonText());
 
