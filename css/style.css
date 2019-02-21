@@ -361,7 +361,11 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
 .content>p {
     padding-left: 10px;
     padding-right: 10px;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif; 
+    transition: 1 ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out; 
 }
 
 
@@ -486,6 +490,14 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
 #search-bar {
     margin-bottom: 10px;
     min-width: 300px;
+}
+
+#dropdownTypeButton {
+    min-width: 224px;
+}
+
+.dropdown-item {
+    padding-left: 5px;
 }
 
 button.dropdown-toggle {
