@@ -123,7 +123,9 @@
                             </div>
                         </div>
                     </div>
-                    <div id="photo-carousel" class="carousel slide" style="display: none">
+                    <!--data-interval is false as if the carousel continues to automatically slide, it can upset user experience when the user moves further down the page. 
+                    (The carousel resizing depending on the photos can cause the users position on the page to jump)-->
+                    <div id="photo-carousel" class="carousel slide" data-interval="false" style="display: none">
                         <!-- Wrapper for carousel items -->
                         <div id="photo-carousel-elements" class="carousel-inner"></div>
                         <!-- Carousel controls -->

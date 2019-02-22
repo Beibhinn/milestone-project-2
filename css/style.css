@@ -289,8 +289,8 @@ button.submit,
 }
 
 #photo-carousel-elements,
-.item,
-img {
+#photo-carousel-elements > .item > img,
+#photo-carousel-elements > .item .active > img {
     border-radius: 20px;
 }
 
@@ -300,11 +300,11 @@ img {
 }
 
 .left {
-    border-radius: 25px 0px 0px 25px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 .right {
-    border-radius: 0px 25px 25px 0px;
+    border-radius: 0px 20px 20px 0px;
 }
 
 
