@@ -327,6 +327,10 @@ button.submit,
     text-align: center;
 }
 
+.hint {
+    padding-bottom: 15px;
+}
+
 #skyscanner {
     width: 70%;
     margin-left: 15%;

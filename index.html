@@ -15,6 +15,7 @@
     <nav class="navbar navbar-fixed-top" id="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
+                <!-- Logo will act as home button to bring user to top-->
                 <a href="index.html" class="navbar-brand" id="logo" href="index.html">
                     <img src="images/logo8.png" alt="Trips & Advice">
                 </a>
@@ -91,6 +92,7 @@
                             <img src="images/photo4.jpg">
                             <div class="text">Wiang Kum Kam, ตำบล ช้างเผือก, Thailand</div>
                         </div>
+                        <!-- Carousel Controls-->
                         <a class="carousel-control left" id="prev" onclick="plusSlides(-1)"><span class="glyphicon glyphicon-chevron-left"></span></a>
                         <a class="carousel-control right" id="next" onclick="plusSlides(1)"><span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
@@ -151,6 +153,9 @@
                             <h2>Flights</h2>
                         </div>
                     </div>
+                    <div class="content col-xs-12">
+                        <p class="hint">Hint: if you're not sure where you want to go to, search to 'Everywhere' and you can see a list of destinations, arranged by price!</p>
+                    </div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div data-skyscanner-widget="SearchWidget" data-origin-geo-lookup="true" data-target="_blank" id="skyscanner"></div>
@@ -170,6 +175,7 @@
                     <p>Not sure what to pack? Look up the weather for your destination here, so you know whether to pack your swimsuit and shades or your coat and scarf!</p>
                     <p>Enter your city and country here (or city and state, if applicable) and we'll check the forecast for you. Simple!</p>
                 </div>
+                <!-- Specified city and country in message above and in placeholder to reduce errors with API displaying info for somewhere other than where user intended-->
                 <div class="content col-xs-12">
                     <input type="text" id="weather-input" name="weather-search" placeholder="City, Country">
                     <div>
@@ -260,31 +266,11 @@
                         <div class="content">
                             <p>Please enter a location to search for attractions, accommodation and restaraunts.</p>
                         </div>
-                        <!-- <div id="map-search">
-                            <input type="text" id="search-bar" name="location-search" placeholder="Location">
-                            <div class="radios">
-                                <input type="radio" name="search" value="Accommodation" id="accommodation"> Accommodation
-                                <input type="radio" name="search" value="Attractions" id="attractions"> Attractions
-                                <input type="radio" name="search" value="Bars" id="bars"> Bars
-                                <input type="radio" name="search" value="Cafes" id="cafes"> Cafés
-                                <input type="radio" name="search" value="Restaraunts" id="restaurants"> Restaraunts
-                            </div>
-                        </div> -->
                         <div id="map-search">
                             <div>
                                 <!-- search bar must be wide enough that the user gets enough details to choose the correct option with the autocomplete-->
                                 <input type="text" id="search-bar" name="location-search" placeholder="Location">
                             </div>
-                            <!--
-                            <div class="dropdown btn-group">
-                                <select type="button" class="btn btn-info submit dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <option value="" disabled selected>What are you looking for?</option>
-                                    <option value="accommodation">Accommodation</option>
-                                    <option value="bars">Bars</option>
-                                    <span class="caret"></span>
-                                </select>
-                            </div>
-                            -->
                             <div class="dropdown btn-group">
                                 <button type="button" class="btn btn-info submit dropdown-toggle type" id="dropdownTypeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 What are you looking for? <span class="caret"></span></button>
@@ -316,6 +302,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-6">
+                    <!-- map container--> 
                     <div id="map">
                         
                     </div>
@@ -397,6 +384,7 @@
     <footer>
         <div class="container-fluid">
             <div class="row">
+                <!-- Link to source code-->
                 <ul class="footer col-xs-12">
                     <li><a href="https://github.com/Beibhinn/milestone-project-2" target="_blank"><i class="fab fa-github"></i></i> Site hosted by GitHub Pages. </a></li>
                 </ul>
