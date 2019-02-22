@@ -496,8 +496,9 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
     min-width: 224px;
 }
 
-.dropdown-item {
+.dropdown-data {
     padding-left: 5px;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 button.dropdown-toggle {
