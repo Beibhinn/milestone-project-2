@@ -98,5 +98,4 @@ function handleHistoryResponse(response) {
         weather.hide("fast", "linear");
         $("#history-fail").show("slow", "linear");
     }
-    // document.getElementById("weather-history").style.display = "inline-block";
 }

@@ -161,11 +161,9 @@ function initAutocomplete() {
       var infowindow = new google.maps.InfoWindow({
           content: contentString
         }); 
-      // var infowindow = new google.maps.InfoWindow();
       
       google.maps.event.addListener(marker, 'click', function() {
         console.log(place);
-       /* infowindow.setContent(`The place name is ${place.name}.*/
         infowindow.open(map, this);
       });
     
@@ -237,5 +235,5 @@ $(".spas").on("click", () => searchNearby('spa'), changeButtonText());
 $(".subway-stations").on("click", () => searchNearby('subway_station'), changeButtonText());
 $(".taxi-stands").on("click", () => searchNearby('taxi_stand'), changeButtonText());
 $(".train-stations").on("click", () => searchNearby('train_station'), changeButtonText());
-$("#zoos").on("click", () => searchNearby('zoo'), changeButtonText());
+$(".zoos").on("click", () => searchNearby('zoo'), changeButtonText());
 
