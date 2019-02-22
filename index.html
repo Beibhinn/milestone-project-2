@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
 <head>
     <meta charset="utf-8">
@@ -16,10 +16,10 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <!-- Logo will act as home button to bring user to top-->
-                <a href="index.html" class="navbar-brand" id="logo" href="index.html">
+                <a href="index.html" class="navbar-brand" id="logo">
                     <img src="images/logo8.png" alt="Trips & Advice">
                 </a>
-                <div align="right" display="inline-block">
+                <div align="right">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-list-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -72,24 +72,24 @@
                     <div class="slideshow-container">
                         <div class="photoSlides fade">
                             <div class="numbers">1 / 4</div>
-                            <img src="images/photo1.jpg">
+                            <img src="images/photo1.jpg" alt="Machu Picchu">
                             <div class="text">Machu Picchu, Peru</div>
                         </div>
 
                         <div class="photoSlides fade">
                             <div class="numbers">2 / 4</div>
-                            <img src="images/photo2.jpg">
+                            <img src="images/photo2.jpg" alt="Sydney, Australia">
                             <div class="text">Sydney, Australia</div>
                         </div>
 
                         <div class="photoSlides fade">
                             <div class="numbers">3 / 4</div>
-                            <img src="images/photo3.jpg">
+                            <img src="images/photo3.jpg" alt="Tarangire National Park, Arusha, Tanzania">
                             <div class="text">Tarangire National Park, Arusha, Tanzania</div>
                         </div>
                         <div class="photoSlides fade">
                             <div class="numbers">4 / 4</div>
-                            <img src="images/photo4.jpg">
+                            <img src="images/photo4.jpg" alt="Wiang Kum Kam, ตำบล ช้างเผือก, Thaila">
                             <div class="text">Wiang Kum Kam, ตำบล ช้างเผือก, Thailand</div>
                         </div>
                         <!-- Carousel Controls-->
@@ -189,35 +189,36 @@
                     <div id="weather-box" class="container row" style="display: none">
                         <div class="weather-container weather1 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon" />
+                            <!--src for all img="icon" added with javascript in js/weather.js-->
+                            <img class="icon" alt="Weather icon"/> 
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather2 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon" />
+                            <img class="icon" alt="Weather icon"/>
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather3 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon" />
+                            <img class="icon" alt="Weather icon"/>
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather4 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon" />
+                            <img class="icon" alt="Weather icon"/>
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather5 col-xs-6 col-xs-offset-3 col-sm-offset-5 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon" />
+                            <img class="icon" alt="Weather icon"/>
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
@@ -238,7 +239,8 @@
                 <div id="weather-history" class="container-fluid">
                     <div id="history-box" class="weather-container col-xs-12 col-md-6 col-md-offset-3" style="display: none">
                         <div class="date history"></div>
-                        <img class="icon history" />
+                        <!--src for img class="icon history" added with javascript in js/weather.js-->
+                        <img class="icon history" alt="Weather icon"/>
                         <div class="description history"></div>
                         <div class="mintemp history"></div>
                         <div class="avg-temp history"></div>
@@ -276,26 +278,26 @@
                                 What are you looking for? <span class="caret"></span></button>
                                 <!-- Radio buttons replaced with dropdown menu to provide more search options for the user and more accurate results-->
                                 <div id="type-dropdown" class="dropdown-menu scrollable-menu" aria-labelledby="dropdownTypeButton">
-                                    <div class="dropdown-data accommodation"><a class="dropdown-item" class="accommodation">Accommodation</a></div>
-                                    <div class="dropdown-data amusement-parks"><a class="dropdown-item" class="amusement-parks">Amusement parks</a></div>
-                                    <div class="dropdown-data aquariums"><a class="dropdown-item" class="aquariums">Aquariums</a></div>
-                                    <div class="dropdown-data art-galleries"><a class="dropdown-item" class="art-galleries">Art galleries</a></div>
-                                    <div class="dropdown-data bars"><a class="dropdown-item" class="bars">Bars</a></div>
-                                    <div class="dropdown-data bowling-alleys"><a class="dropdown-item" class="bowling-alleys">Bowling alleys</a></div>
-                                    <div class="dropdown-data bus-stations"><a class="dropdown-item" class="bus-stations">Bus stations</a></div>
-                                    <div class="dropdown-data cafes"><a class="dropdown-item" class="cafes">Cafés</a></div>
-                                    <div class="dropdown-data casinos"><a class="dropdown-item" class="casinos">Casinos</a></div>
-                                    <div class="dropdown-data movie-theaters"><a class="dropdown-item" class="movie-theaters">Movie Theaters</a></div>
-                                    <div class="dropdown-data museums"><a class="dropdown-item" class="museums">Museums</a></div>
-                                    <div class="dropdown-data night-clubs"><a class="dropdown-item" class="night-clubs">Night clubs</a></div>
-                                    <div class="dropdown-data parks"><a class="dropdown-item" class="parks">Parks</a></div>
-                                    <div class="dropdown-data restaurants"><a class="dropdown-item" class="restaurants">Restaurants</a></div>
-                                    <div class="dropdown-data shopping-malls"><a class="dropdown-item" class="shopping-malls">Shopping Malls</a></div>
-                                    <div class="dropdown-data spas"><a class="dropdown-item" class="spas">Spas</a></div>
-                                    <div class="dropdown-data subway-stations"><a class="dropdown-item" class="subway-stations">Subway stations</a></div>
-                                    <div class="dropdown-data taxi-stands"><a class="dropdown-item" class="taxi-stands">Taxi stands</a></div>
-                                    <div class="dropdown-data train-stations"><a class="dropdown-item" class="train-stations">Train stations</a></div>
-                                    <div class="dropdown-data zoos"><a class="dropdown-item" class="zoos">Zoos</a></div>
+                                    <div class="dropdown-data accommodation"><a class="dropdown-item accommodation">Accommodation</a></div>
+                                    <div class="dropdown-data amusement-parks"><a class="dropdown-item amusement-parks">Amusement parks</a></div>
+                                    <div class="dropdown-data aquariums"><a class="dropdown-item aquariums">Aquariums</a></div>
+                                    <div class="dropdown-data art-galleries"><a class="dropdown-item art-galleries">Art galleries</a></div>
+                                    <div class="dropdown-data bars"><a class="dropdown-item bars">Bars</a></div>
+                                    <div class="dropdown-data bowling-alleys"><a class="dropdown-item bowling-alleys">Bowling alleys</a></div>
+                                    <div class="dropdown-data bus-stations"><a class="dropdown-item bus-stations">Bus stations</a></div>
+                                    <div class="dropdown-data cafes"><a class="dropdown-item cafes">Cafés</a></div>
+                                    <div class="dropdown-data casinos"><a class="dropdown-item casinos">Casinos</a></div>
+                                    <div class="dropdown-data movie-theaters"><a class="dropdown-item movie-theaters">Movie Theaters</a></div>
+                                    <div class="dropdown-data museums"><a class="dropdown-item museums">Museums</a></div>
+                                    <div class="dropdown-data night-clubs"><a class="dropdown-item night-clubs">Night clubs</a></div>
+                                    <div class="dropdown-data parks"><a class="dropdown-item parks">Parks</a></div>
+                                    <div class="dropdown-data restaurants"><a class="dropdown-item restaurants">Restaurants</a></div>
+                                    <div class="dropdown-data shopping-malls"><a class="dropdown-item shopping-malls">Shopping Malls</a></div>
+                                    <div class="dropdown-data spas"><a class="dropdown-item spas">Spas</a></div>
+                                    <div class="dropdown-data subway-stations"><a class="dropdown-item subway-stations">Subway stations</a></div>
+                                    <div class="dropdown-data taxi-stands"><a class="dropdown-item taxi-stands">Taxi stands</a></div>
+                                    <div class="dropdown-data train-stations"><a class="dropdown-item train-stations">Train stations</a></div>
+                                    <div class="dropdown-data zoos"><a class="dropdown-item zoos">Zoos</a></div>
                                 </div>
                             </div> 
                         </div>
@@ -368,7 +370,7 @@
                         </tr>
                         <tr>
                             <th>Flag:</th>
-                            <td class="flags col-xs-3"><img class="flag"></img>
+                            <td class="flags col-xs-3"><img class="flag" alt="Country Flag">
                             </td>
                         </tr>
                     </table>
@@ -386,7 +388,7 @@
             <div class="row">
                 <!-- Link to source code-->
                 <ul class="footer col-xs-12">
-                    <li><a href="https://github.com/Beibhinn/milestone-project-2" target="_blank"><i class="fab fa-github"></i></i> Site hosted by GitHub Pages. </a></li>
+                    <li><a href="https://github.com/Beibhinn/milestone-project-2" target="_blank"><i class="fab fa-github"></i> Site hosted by GitHub Pages. </a></li>
                 </ul>
             </div>
         </div>
