@@ -112,7 +112,7 @@ ul.nav>li>a:hover {
 div.jumbotron {
     margin-bottom: 0px;
     color: #4dccbd;
-    background: url('../images/cover1.jpg');
+    background: url('../images/cover1.webp');
     background-size: cover;
     height: 575px;
 }
@@ -615,7 +615,7 @@ img.flag {
 
 
 .bottom-photo {
-    background: url('../images/cover3.jpg') center center;
+    background: url('../images/cover3.webp') center center;
     background-size: cover;
     height: 400px;
     padding-bottom: 50px;
