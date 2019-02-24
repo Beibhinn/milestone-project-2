@@ -161,6 +161,7 @@ button.submit {
     }
 }
 
+
 /*------------------------------------------------Inspiration */
 
 #inspiration {
@@ -188,9 +189,6 @@ h2 {
     border-bottom-right-radius: 10px;
 }
 
-* {
-    box-sizing: border-box
-}
 
 .slideshow-container {
     max-width: 1000px;

@@ -1,4 +1,5 @@
 /*global $*/
+/*jshint esversion: 6 */
 
 function searchForInfo(searchTerms, onSuccess, onError) {
     if (searchTerms.trim().length < 4) {

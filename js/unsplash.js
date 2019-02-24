@@ -1,4 +1,5 @@
 /*global $*/
+/*jshint esversion: 6 */
 
 function onPhotoSearchSubmit() {
     searchForPhotos($("#photo-input").val(), handleUnsplashResponse, (e) => console.log(e));

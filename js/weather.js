@@ -1,4 +1,5 @@
 /*global $*/
+/*jshint esversion: 6 */
 
 
 function searchForWeather(searchTerms, onSuccess, onError) {
