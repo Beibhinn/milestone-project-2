@@ -42,7 +42,7 @@ Initially, I had only planned to include a section for flights, travel inspirati
 -   As a prospective tourist, I want to be able to look up relevant information about my destination country, to better educate and prepare myself, in anticipation of an upcoming trip.
 
 
-The wireframes I created for this project can be viewed [here]. (https://beibhinn.github.io/milestone-project-2/Project-mockups.pdf)
+The wireframes I created for this project can be viewed [here.](https://beibhinn.github.io/milestone-project-2/Project-mockups.pdf)
 
 
 ### Features
@@ -52,7 +52,7 @@ The wireframes I created for this project can be viewed [here]. (https://beibhin
 
 #### Existing Features
 
--   *Navbar*: Allows all users to easily navigate to the different sections of the website, regardless of which page they are currently on, simply by clicking the name of the area they wish to visit in the navbar. This navbar also collapse and disappears automatically as the user scrolls down, to make the most of available real estate. The navbar then automatically reappears in the view as the user scrolls back up, ensuring they can still conveniently navigate around the webpage, without having to scroll all the way back up. [See js/scripts.js]
+-   *Navbar*: Allows all users to easily navigate to the different sections of the website, regardless of which page they are currently on, simply by clicking the name of the area they wish to visit in the navbar. This navbar also collapse and disappears automatically as the user scrolls down, to make the most of available real estate. The navbar then automatically reappears in the view as the user scrolls back up, ensuring they can still conveniently navigate around the webpage, without having to scroll all the way back up. [See js/scripts.js](https://github.com/Beibhinn/milestone-project-2/blob/master/js/scripts.js)
 
 -   *Jumbotron and Callout*: Allows all users to see a visually pleasing photo to encourage travel as soon as they load the page, and provides a callout and button, to take the user to the weather section quickly.
 
@@ -122,103 +122,103 @@ CSS was copied and pasted into [https://jigsaw.w3.org/css-validator/#validate_by
 
 1. *Navbar*:
 
--  Click on each of the individual links within the menu (including the logo), and verify that each one is functioning correctly, and that they take the user to the correct place.
+   -  Click on each of the individual links within the menu (including the logo), and verify that each one is functioning correctly, and that they take the user to the correct place.
 
--  Scroll down and ensure the navbar moves smoothly out of view. In mobile, verify that if the menu is open and visible when the user starts to scroll, it collapses hides along with the rest of the menu.
+   -  Scroll down and ensure the navbar moves smoothly out of view. In mobile, verify that if the menu is open and visible when the user starts to scroll, it collapses hides along with the rest of the menu.
   
-- Scroll back up and ensure the navbar reappears. 
+   - Scroll back up and ensure the navbar reappears. 
 
 2. *Jumbotron*:
 
--  Click the 'Take me there' button, and verify it does in fact take the user to the weather section.
+   -  Click the 'Take me there' button, and verify it does in fact take the user to the weather section.
 
 3. *Travel Inspiration*:
 
--  Click both the right and left arrows to ensure that the active photo in the carousel slides smoothly to the next photo.
+   -  Click both the right and left arrows to ensure that the active photo in the carousel slides smoothly to the next photo.
 
--  Adjust size of browser window to various sizes, to ensure the carousel resizes well and is responsive.
+   -  Adjust size of browser window to various sizes, to ensure the carousel resizes well and is responsive.
 
--  Enter in a search location (such as 'Ireland'), click 'submit' and verify that the user is shown a carousel of photos matching their search term. (This was tested with multiple search terms, however it should be noted that the results do depend on how they were tagged when uploaded to the unsplash website, and so I cannot guarantee that all photos shown will be relevant).
+   -  Enter in a search location (such as 'Ireland'), click 'submit' and verify that the user is shown a carousel of photos matching their search term. (This was tested with multiple search terms, however it should be noted that the results do depend on how they were tagged when uploaded to the unsplash website, and so I cannot guarantee that all photos shown will be relevant).
 
--  Enter in a search term/ location, press 'enter' on the keyboard to ensure this also triggers a search and verify that the user is shown a carousel of photos relating to their search.
+   -  Enter in a search term/ location, press 'enter' on the keyboard to ensure this also triggers a search and verify that the user is shown a carousel of photos relating to their search.
 
--  Click the left and right arrows to ensure that the photo changes as the user clicks.
+   -  Click the left and right arrows to ensure that the photo changes as the user clicks.
 
--  Adjust size of browser window to various sizes, to ensure the unsplash carousel resizes well and is responsive.
+   -  Adjust size of browser window to various sizes, to ensure the unsplash carousel resizes well and is responsive.
 
--  Leave the input box blank and click submit, to verify that the input box border turns red to indicate to the user that the field is required.
+   -  Leave the input box blank and click submit, to verify that the input box border turns red to indicate to the user that the field is required.
 
 4. *Flights*:
 
--  Enter locations in the 'From', 'To, 'Depart' and 'Return' fields, click 'search flights'.
+   -  Enter locations in the 'From', 'To, 'Depart' and 'Return' fields, click 'search flights'.
 
--  Ensure results are shown in a new tab.
+   -  Ensure results are shown in a new tab.
 
--  Leave the 'To' destination blank and search for flights. Verify that when no 'To' destination is entered, results are shown to 'everywhere'.
+   -  Leave the 'To' destination blank and search for flights. Verify that when no 'To' destination is entered, results are shown to 'everywhere'.
 
--  Leave the ''Depart' or 'Return' fields blank and search for flights. Verify that when no date is entered, results are shown based on the cheapest month.
+   -  Leave the ''Depart' or 'Return' fields blank and search for flights. Verify that when no date is entered, results are shown based on the cheapest month.
 
--  Verify that when no 'To' destination is entered and no dates are chosen, results are shown to 'everywhere' based on the cheapest month.
+   -  Verify that when no 'To' destination is entered and no dates are chosen, results are shown to 'everywhere' based on the cheapest month.
 
 5. *Weather*:
 
--  Enter a city and country, click 'submit'. Verify the location name appears below the submit button, as well as 5 boxes displaying the forecast for the coming five days.
+   -  Enter a city and country, click 'submit'. Verify the location name appears below the submit button, as well as 5 boxes displaying the forecast for the coming five days.
 
--  Repeat the step above, pressing 'enter' on the keyboard to trigger the search.
+   -  Repeat the step above, pressing 'enter' on the keyboard to trigger the search.
 
--  Select a date in the past to see additional information. Verify an information box containing the requested details appears.
+   -  Select a date in the past to see additional information. Verify an information box containing the requested details appears.
 
--  To verify an error message appears if no data found, try a date farther in the past, as data for some countries is not available from earlier years. (Eg Cork, Ireland. December 2017). Confirm error message appears.
+   -  To verify an error message appears if no data found, try a date farther in the past, as data for some countries is not available from earlier years. (Eg Cork, Ireland. December 2017). Confirm error message appears.
 
--  Try to choose a date prior to January 2015 and verify the date picker will not allow the user to do so.
+   -  Try to choose a date prior to January 2015 and verify the date picker will not allow the user to do so.
 
-- Leave the location input box blank and click submit, to verify that the input box border turns red to indicate to the user that the field is required.
+   - Leave the location input box blank and click submit, to verify that the input box border turns red to indicate to the user that the field is required.
 
 6. *Nearby*:
 
--  Begin typing a location. Verify an autocomplete box powered by google appears with location suggestions.
+   -  Begin typing a location. Verify an autocomplete box powered by google appears with location suggestions.
 
--  Select a location from the list and verify that the map moves to that location.
+   -  Select a location from the list and verify that the map moves to that location.
 
--  Type a location in its entirety in the input box. Press 'enter' on the keyboard to verify this also triggers the search and moves the map to the location.
+   -  Type a location in its entirety in the input box. Press 'enter' on the keyboard to verify this also triggers the search and moves the map to the location.
 
--  Choose each of the individual items from the drop down menu and verify markers appear.
+   -  Choose each of the individual items from the drop down menu and verify markers appear.
 
--  Choose one dropdown item after another to verify when a new dropdown item is selected, the old markers are cleared out to make way for the markers for the new results.
+   -  Choose one dropdown item after another to verify when a new dropdown item is selected, the old markers are cleared out to make way for the markers for the new results.
 
--  Try each item in the dropdown menu to verify that when a certain type of location is not found in the search area, an alert appears to advise the user to try a different search.
+   -  Try each item in the dropdown menu to verify that when a certain type of location is not found in the search area, an alert appears to advise the user to try a different search.
 
--  Verify the alert vanishes automatically when the user searches for a new location or selects a new dropdown item.
+   -  Verify the alert vanishes automatically when the user searches for a new location or selects a new dropdown item.
 
--  Clicking the 'x' in the top right corner to verify the alert is dismissible.
+   -  Clicking the 'x' in the top right corner to verify the alert is dismissible.
 
--  Click a marker and see the location name, rating and general address displayed in an info window.
+   -  Click a marker and see the location name, rating and general address displayed in an info window.
 
-- Click the 'x' in the top right corner to verify the info window is dismissible.
+   - Click the 'x' in the top right corner to verify the info window is dismissible.
 
-- Verify that if the user searches for a second place, following selecting options from the dropdown menu, the text in the dropdown box will automatically display 'what are you looking for?' again.
+   - Verify that if the user searches for a second place, following selecting options from the dropdown menu, the text in the dropdown box will automatically display 'what are you looking for?' again.
 
-- Click the 'satellite' button and the 'map' button to change view.
+   - Click the 'satellite' button and the 'map' button to change view.
 
-- Click the square in the top right corner of the map to toggle fullscreen view.
+   - Click the square in the top right corner of the map to toggle fullscreen view.
 
-- Click the '+' and '-' buttons on the bottom right of the map to zoom in and out.
+   - Click the '+' and '-' buttons on the bottom right of the map to zoom in and out.
 
-- Click and drag to move around the map.
+   - Click and drag to move around the map.
 
-- Verify that clicking and dragging, then selecting an item from the dropdown will search the visible area for results of that type.
+   - Verify that clicking and dragging, then selecting an item from the dropdown will search the visible area for results of that type.
 
 7. *Useful Information*:
 
--  Select a country from the dropdown menu
+   -  Select a country from the dropdown menu
 
--  Verify a table slides in to view, displaying information and a flag.
+   -  Verify a table slides in to view, displaying information and a flag.
 
--  Select another country and verify the information clears out and changes to display the new information.
+   -  Select another country and verify the information clears out and changes to display the new information.
 
 8. *Footer*:
 
--  Click the link in the footer and verify that user is brought to the github repo for this project.
+   -  Click the link in the footer and verify that user is brought to the github repo for this project.
 
 *API and Javascript testing*:
 
@@ -251,6 +251,8 @@ The process used to deploy my code was straightforward.
 5.  Finally, I clicked save.
 
 6.  From that point on, whenever I pushed to 'master', the live website would be updated.
+
+
 
 My website can be found at the following URL: [https://beibhinn.github.io/milestone-project-2/](https://beibhinn.github.io/milestone-project-2/)
 
