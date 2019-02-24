@@ -1,5 +1,4 @@
 # Milestone Project Two
-=====================
 
 * * * * *
 
@@ -13,14 +12,12 @@ As travel is such a big industry, I undertook this project knowing that there wo
 
 This project is intended as a travel tool to help users plan a trip. It will guide users through the planning process, all the way from destination inspiration, to searching for flights, accessing weather forecasts and searching for nearby attractions and facilities. It will also allow the user to easily access relevant information regarding their destination country, such as capital city, language, and currency.
 
-My website can be found at the following URL: [https://beibhinn.github.io/milestone-project-2] (https://beibhinn.github.io/milestone-project-2)
+My website can be found at the following URL: [https://beibhinn.github.io/milestone-project-2](https://beibhinn.github.io/milestone-project-2)
 
 
 ### UX
 
 * * * * *
-
----------------
 
 Initially, I had only planned to include a section for flights, travel inspiration, attractions, accommodation and restaurants, focusing heavily on the given examples in the brief. However, as the project went on, I realised that my plan to use the google maps and places API meant the attractions, accommodation and restaurant would easily be taken care of in the same place. As a result, I felt there was scope for additional features, and also focused on extra things a user may want to achieve when planning a trip.
 
@@ -49,7 +46,6 @@ The wireframes I created for this project can be viewed [here]. (https://beibhin
 
 
 ### Features
---------
 
 * * * * *
 
@@ -60,17 +56,17 @@ The wireframes I created for this project can be viewed [here]. (https://beibhin
 
 -   *Jumbotron and Callout*: Allows all users to see a visually pleasing photo to encourage travel as soon as they load the page, and provides a callout and button, to take the user to the weather section quickly.
 
--   *Fixed travel inspiration carousel*: Displays famous landmarks and destinations to the user, to give the prospective holiday maker some inspiration while they are still contemplating and deciding where to go. [See js/photos.js] (https://github.com/Beibhinn/milestone-project-2/blob/master/js/photos.js)
+-   *Fixed travel inspiration carousel*: Displays famous landmarks and destinations to the user, to give the prospective holiday maker some inspiration while they are still contemplating and deciding where to go. [See js/photos.js](https://github.com/Beibhinn/milestone-project-2/blob/master/js/photos.js)
 
--   *Unsplash photo carousel*: Allows the prospective holiday maker to explore and search for photos of a location they may be thinking of visiting, to help them come to a decision. (Uses the unsplash API). [See js/unsplash.js] (https://github.com/Beibhinn/milestone-project-2/blob/master/js/unsplash.js)
+-   *Unsplash photo carousel*: Allows the prospective holiday maker to explore and search for photos of a location they may be thinking of visiting, to help them come to a decision. (Uses the unsplash API). [See js/unsplash.js](https://github.com/Beibhinn/milestone-project-2/blob/master/js/unsplash.js)
 
 -   *Skyscanner widget*: Allows the potential traveller to look search for flights based on dates the user wishes to travel. Users that know where they would like to go can easily book their flights, and users that may not yet have a destination in mind can browse and choose a location based on their chosen dates and budget.
 
--   *APIXU weather search*: Allows the holiday maker or prospective holiday maker to make informed decisions when booking a trip, or help the user to know what to pack by searching for and accessing weather information for their destination. (Uses the APIXU API). [See js/weather.js] (https://github.com/Beibhinn/milestone-project-2/blob/master/js/weather.js)
+-   *APIXU weather search*: Allows the holiday maker or prospective holiday maker to make informed decisions when booking a trip, or help the user to know what to pack by searching for and accessing weather information for their destination. (Uses the APIXU API). [See js/weather.js](https://github.com/Beibhinn/milestone-project-2/blob/master/js/weather.js)
 
--   *Google map*: Allows a tourist to discover nearby attractions and facilities by searching for their location and choosing an option from a dropdown menu. The user can then view the results on a map. (Uses Google Maps and Google Places). [See js/maps.js] (https://github.com/Beibhinn/milestone-project-2/blob/master/js/maps.js)
+-   *Google map*: Allows a tourist to discover nearby attractions and facilities by searching for their location and choosing an option from a dropdown menu. The user can then view the results on a map. (Uses Google Maps and Google Places). [See js/maps.js](https://github.com/Beibhinn/milestone-project-2/blob/master/js/maps.js)
 
--   *Useful information search*: Allows prospective tourists to access useful and relevant information about their destination, by selecting their chosen country from the dropdown menu. (Uses the REST Countries API). [See js/countries.js] (https://github.com/Beibhinn/milestone-project-2/blob/master/js/countries.js) and [js/info.js] (https://github.com/Beibhinn/milestone-project-2/blob/master/js/info.js)
+-   *Useful information search*: Allows prospective tourists to access useful and relevant information about their destination, by selecting their chosen country from the dropdown menu. (Uses the REST Countries API). [See js/countries.js](https://github.com/Beibhinn/milestone-project-2/blob/master/js/countries.js) and [js/info.js](https://github.com/Beibhinn/milestone-project-2/blob/master/js/info.js)
 
 -   *Footer*: Informs the user that the site is hosted by Github Pages, and provides as link to where they can view the source code on Github.
 
@@ -91,7 +87,6 @@ Due to the time and cost limitations of this project, there are additional featu
 
 
 ### Technologies Used
------------------
 
 * * * * *
 
@@ -101,23 +96,22 @@ Due to the time and cost limitations of this project, there are additional featu
 
 -   *Bootstrap 3.3.7*: [https://getbootstrap.com/docs/3.3/getting-started/](https://getbootstrap.com/docs/3.3/getting-started/) : As Bootstrap is designed with the Mobile First Approach in mind, this framework was used to help structure the website, ensuring that it would be compatible on mobile devices.
 
--   *JQuery*: [https://jquery.com] (https://jquery.com) : JQuery was used to simplify DOM manipulation.
+-   *JQuery*: [https://jquery.com](https://jquery.com) : JQuery was used to simplify DOM manipulation.
 
--   *Font Awesome*: [https://fontawesome.com] (https://fontawesome.com) : Font Awesome was used to add icons to the site, such as the icons in header and footer.
+-   *Font Awesome*: [https://fontawesome.com](https://fontawesome.com) : Font Awesome was used to add icons to the site, such as the icons in header and footer.
 
--   *Popper.js*: [https://popper.js.org] (https://popper.js.org) : Was used to position the dropdown menus to their respective buttons, as instructed in the bootstrap downdown documentation.
+-   *Popper.js*: [https://popper.js.org](https://popper.js.org) : Was used to position the dropdown menus to their respective buttons, as instructed in the bootstrap downdown documentation.
 
--   *Unsplash API*: [https://unsplash.com/documentation] (https://unsplash.com/documentation) : Was used to allow the user to search for high quality photos relating to their location of choice. Unsplash specifically was chosen, as it is a free service and all photos on their site are free to use.
+-   *Unsplash API*: [https://unsplash.com/documentation](https://unsplash.com/documentation) : Was used to allow the user to search for high quality photos relating to their location of choice. Unsplash specifically was chosen, as it is a free service and all photos on their site are free to use.
 
--   *APIXU API*: [https://www.apixu.com/doc] (https://www.apixu.com/doc) : This API was used as it has a large amount of weather data available, including forecast, history, and relevant icons, at no cost.
+-   *APIXU API*: [https://www.apixu.com/doc](https://www.apixu.com/doc) : This API was used as it has a large amount of weather data available, including forecast, history, and relevant icons, at no cost.
 
--   *Google Maps & Google Places API*: [https://developers.google.com/maps/documentation/javascript/tutorial] (https://developers.google.com/maps/documentation/javascript/tutorial) & [https://developers.google.com/places/web-service/intro] (https://developers.google.com/places/web-service/intro) : The Google maps and places APIs were used as they are powerful and allowed me to combine and implement multiple desired features into one.
+-   *Google Maps & Google Places API*: [https://developers.google.com/maps/documentation/javascript/tutorial](https://developers.google.com/maps/documentation/javascript/tutorial) & [https://developers.google.com/places/web-service/intro](https://developers.google.com/places/web-service/intro) : The Google maps and places APIs were used as they are powerful and allowed me to combine and implement multiple desired features into one.
 
--   *REST Countries API*: [https://restcountries.eu] (https://restcountries.eu) : This API was selected as it has relevant data on a long list of countries and is well documented, making it simple to use.
+-   *REST Countries API*: [https://restcountries.eu](https://restcountries.eu) : This API was selected as it has relevant data on a long list of countries and is well documented, making it simple to use.
 
 
 ### Testing
--------
 
 * * * * *
 
@@ -126,107 +120,113 @@ HTML was copied and pasted into [https://validator.w3.org/#validate_by_input](ht
 CSS was copied and pasted into [https://jigsaw.w3.org/css-validator/#validate_by_input](https://jigsaw.w3.org/css-validator/#validate_by_input) to determine validity.
 
 
-*Navbar*:
+1. *Navbar*:
 
-1.  Click on each of the individual links within the menu (including the logo), and verify that each one is functioning correctly, and that they take the user to the correct place.
+-  Click on each of the individual links within the menu (including the logo), and verify that each one is functioning correctly, and that they take the user to the correct place.
 
-2.  Scroll down and ensure the navbar moves smoothly out of view. In mobile, verify that if the menu is open and visible when the user starts to scroll, it collapses hides along with the rest of the menu.
+-  Scroll down and ensure the navbar moves smoothly out of view. In mobile, verify that if the menu is open and visible when the user starts to scroll, it collapses hides along with the rest of the menu.
+  
+- Scroll back up and ensure the navbar reappears. 
 
-*Jumbotron*:
+2. *Jumbotron*:
 
-1.  Click the 'Take me there' button, and verify it does in fact take the user to the weather section.
+-  Click the 'Take me there' button, and verify it does in fact take the user to the weather section.
 
-*Travel Inspiration*:
+3. *Travel Inspiration*:
 
-1.  Click both the right and left arrows to ensure that the active photo in the carousel slides smoothly to the next photo.
+-  Click both the right and left arrows to ensure that the active photo in the carousel slides smoothly to the next photo.
 
-2.  Adjust size of browser window to various sizes, to ensure the carousel resizes well and is responsive.
+-  Adjust size of browser window to various sizes, to ensure the carousel resizes well and is responsive.
 
-3.  Enter in a search location (such as 'Ireland'), click 'submit' and verify that the user is shown a carousel of photos matching their search term. (This was tested with multiple search terms, however it should be noted that the results do depend on how they were tagged when uploaded to the unsplash website, and so I cannot guarantee that all photos shown will be relevant).
+-  Enter in a search location (such as 'Ireland'), click 'submit' and verify that the user is shown a carousel of photos matching their search term. (This was tested with multiple search terms, however it should be noted that the results do depend on how they were tagged when uploaded to the unsplash website, and so I cannot guarantee that all photos shown will be relevant).
 
-4.  Enter in a search term/ location, press 'enter' on the keyboard to ensure this also triggers a search and verify that the user is shown a carousel of photos matching their search.
+-  Enter in a search term/ location, press 'enter' on the keyboard to ensure this also triggers a search and verify that the user is shown a carousel of photos relating to their search.
 
-5.  Click the left and right arrows to ensure that the photo changes as the user clicks.
+-  Click the left and right arrows to ensure that the photo changes as the user clicks.
 
-6.  Adjust size of browser window to various sizes, to ensure the unsplash carousel resizes well and is responsive.
+-  Adjust size of browser window to various sizes, to ensure the unsplash carousel resizes well and is responsive.
 
-*Flights*:
+-  Leave the input box blank and click submit, to verify that the input box border turns red to indicate to the user that the field is required.
 
-1.  Enter locations in the 'From', 'To, 'Depart' and 'Return' fields, click 'search flights'.
+4. *Flights*:
 
-2.  Ensure results are shown in a new window.
+-  Enter locations in the 'From', 'To, 'Depart' and 'Return' fields, click 'search flights'.
 
-3.  Leave the 'To' destination blank and search for flights. Verify that when no 'To' destination is entered, results are shown to 'everywhere'.
+-  Ensure results are shown in a new tab.
 
-4.  Leave the ''Depart' or 'Return' fields blank and search for flights. Verify that when no date is entered, results are shown based on the cheapest month.
+-  Leave the 'To' destination blank and search for flights. Verify that when no 'To' destination is entered, results are shown to 'everywhere'.
 
-5.  Verify that when no 'To' destination is entered and no dates are chosen, results are shown to 'everywhere' based on the cheapest month.
+-  Leave the ''Depart' or 'Return' fields blank and search for flights. Verify that when no date is entered, results are shown based on the cheapest month.
 
-*Weather*:
+-  Verify that when no 'To' destination is entered and no dates are chosen, results are shown to 'everywhere' based on the cheapest month.
 
-1.  Enter a city and country, click 'submit'. Verify the location name appears below the submit button, as well as 5 boxes displaying the forecast for the coming five days.
+5. *Weather*:
 
-2.  Repeat the step above, pressing 'enter' on the keyboard to trigger the search.
+-  Enter a city and country, click 'submit'. Verify the location name appears below the submit button, as well as 5 boxes displaying the forecast for the coming five days.
 
-3.  Select a date in the past to see additional information. Verify an information box containing the required details appears.
+-  Repeat the step above, pressing 'enter' on the keyboard to trigger the search.
 
-4.  To verify an error message appears if no data found, try a date farther in the past, as data for some countries is not available from earlier years. (Eg Cork, Ireland. December 2017). Confirm error message appears.
+-  Select a date in the past to see additional information. Verify an information box containing the requested details appears.
 
-5.  Try to choose a date prior to January 2015 and verify the date picker will not allow the user to do so.
+-  To verify an error message appears if no data found, try a date farther in the past, as data for some countries is not available from earlier years. (Eg Cork, Ireland. December 2017). Confirm error message appears.
 
-*Nearby*:
+-  Try to choose a date prior to January 2015 and verify the date picker will not allow the user to do so.
 
-1.  Begin typing a location. Verify an autocomplete box powered by google appears with location suggestions.
+- Leave the location input box blank and click submit, to verify that the input box border turns red to indicate to the user that the field is required.
 
-2.  Select a location from the list and verify that the map moves to that location.
+6. *Nearby*:
 
-3.  Type a location in its entirety in the input box. Press 'enter' on the keyboard to verify this also triggers the search and moves the map to the location.
+-  Begin typing a location. Verify an autocomplete box powered by google appears with location suggestions.
 
-4.  Choose each of the individual items from the drop down menu and verify markers appear.
+-  Select a location from the list and verify that the map moves to that location.
 
-5.  Choose one dropdown item after another to verify when a new dropdown item is selected, the old markers are cleared out to make way for the markers for the new results.
+-  Type a location in its entirety in the input box. Press 'enter' on the keyboard to verify this also triggers the search and moves the map to the location.
 
-6.  Try each item in the dropdown menu to verify that when a certain type of location is not found in the search area, an alert appears to advise the user to try a different search.
+-  Choose each of the individual items from the drop down menu and verify markers appear.
 
-7.  Verify the alert vanishes automatically when the user searches for a new location or selects a new dropdown item.
+-  Choose one dropdown item after another to verify when a new dropdown item is selected, the old markers are cleared out to make way for the markers for the new results.
 
-8.  Clicking the 'x' in the top right corner to verify the alert is dismissible.
+-  Try each item in the dropdown menu to verify that when a certain type of location is not found in the search area, an alert appears to advise the user to try a different search.
 
-9.  Click a marker and see the location name, rating and general address displayed in an info window.
+-  Verify the alert vanishes automatically when the user searches for a new location or selects a new dropdown item.
 
-10. Click the 'x' in the top right corner to verify the info window is dismissible.
+-  Clicking the 'x' in the top right corner to verify the alert is dismissible.
 
-11. Verify that if the user searches for a second place, following selecting options from the dropdown menu, the text in the dropdown box will automatically display 'what are you looking for?' again.
+-  Click a marker and see the location name, rating and general address displayed in an info window.
 
-12. Click the 'satellite' button and the 'map' button to change view.
+- Click the 'x' in the top right corner to verify the info window is dismissible.
 
-13. Click the square in the top right corner of the map to toggle fullscreen view.
+- Verify that if the user searches for a second place, following selecting options from the dropdown menu, the text in the dropdown box will automatically display 'what are you looking for?' again.
 
-14. Click the '+' and '-' buttons on the bottom right of the map to zoom in and out.
+- Click the 'satellite' button and the 'map' button to change view.
 
-15. Click and drag to move around the map.
+- Click the square in the top right corner of the map to toggle fullscreen view.
 
-16. Verify that clicking and dragging, then selecting an item from the dropdown will search the visible area for results of that type.
+- Click the '+' and '-' buttons on the bottom right of the map to zoom in and out.
 
-*Useful Information*:
+- Click and drag to move around the map.
 
-1.  Select a country from the dropdown menu
+- Verify that clicking and dragging, then selecting an item from the dropdown will search the visible area for results of that type.
 
-2.  Verify a table slides in to view, displaying information and a flag.
+7. *Useful Information*:
 
-3.  Select another country and verify the information clears out and changes to display the new information.
+-  Select a country from the dropdown menu
 
-*Footer*:
+-  Verify a table slides in to view, displaying information and a flag.
 
-1.  Click the link in the footer and verify that user is brought to the github repo for this project.
+-  Select another country and verify the information clears out and changes to display the new information.
 
-*API and Javascript testing*:\
+8. *Footer*:
 
-Each feature which uses an API was tested manually, and while the code was being written, messages were logged to the console, to ensure the code was functioning as it should. Scripts were checked on [https://jshint.com].(https://jshint.com)
+-  Click the link in the footer and verify that user is brought to the github repo for this project.
 
-*Page speed*:\
+*API and Javascript testing*:
 
-I also tested the site on [Google Page Speed Insights] (https://developers.google.com/speed/pagespeed/insights). The size of my photos was impeding the loading time of the site. To combat this, I optimised the images and converted to webp format. If I had more time, I would have implemented lazy loading.
+Each feature which uses an API was tested manually, and while the code was being written, messages were logged to the console, to ensure the code was functioning as it should. Scripts were checked on [https://jshint.com](https://jshint.com)
+
+*Page speed*:
+
+I also tested the site on [Google Page Speed Insights](https://developers.google.com/speed/pagespeed/insights). The size of my photos was impeding the loading time of the site. To combat this, I optimised the images and converted to webp format. If I had more time, I would have implemented lazy loading.
 
 This project is fully responsive, and each section adjusts and resizes to fit every screen size. All features are available on all devices, with easy to use navigation, to help the user get around.
 
@@ -237,7 +237,6 @@ An interesting bug I came across, was that on my google map, there was an odd pa
 
 * * * * *
 
------------------------
 
 The process used to deploy my code was straightforward.
 
@@ -253,7 +252,7 @@ The process used to deploy my code was straightforward.
 
 6.  From that point on, whenever I pushed to 'master', the live website would be updated.
 
-My website can be found at the following URL: [https://beibhinn.github.io/milestone-project-2/] (https://beibhinn.github.io/milestone-project-2/)
+My website can be found at the following URL: [https://beibhinn.github.io/milestone-project-2/](https://beibhinn.github.io/milestone-project-2/)
 
 
 
@@ -262,29 +261,29 @@ My website can be found at the following URL: [https://beibhinn.github.io/milest
 * * * * *
 
 #### Media
--------------------------
 
-All photos used in this site were obtained from [Unsplash.com]. (https://unsplash.com/)
 
-*Logo*: Gif originally by Justin Mezzell, edited for the purpose of this project. [URL] (https://giphy.com/gifs/world-globe-UOdoMz3baCENO)
+All photos used in this site were obtained from [Unsplash.com.](https://unsplash.com/)
 
-*Cover photo* : Photo by Matt Thomason. [URL] (https://unsplash.com/photos/YBLvEQ6npQo)
+*Logo*: Gif originally by Justin Mezzell, edited for the purpose of this project. [URL](https://giphy.com/gifs/world-globe-UOdoMz3baCENO)
+
+*Cover photo* : Photo by Matt Thomason. [URL](https://unsplash.com/photos/YBLvEQ6npQo)
 
 *Carousel* :
 
--   Photo 1: Machu Picchu, Peru. Photo by Sandro Ayalo. [URL] (https://unsplash.com/photos/X1RLNPd_JR4)
+-   Photo 1: Machu Picchu, Peru. Photo by Sandro Ayalo. [URL](https://unsplash.com/photos/X1RLNPd_JR4)
 
 
--   Photo 2 : Sydney, Australia. Photo by Dan Freeman. [URL] (https://unsplash.com/photos/7Zb7kUyQg1E)
+-   Photo 2 : Sydney, Australia. Photo by Dan Freeman. [URL](https://unsplash.com/photos/7Zb7kUyQg1E)
 
 
--   Photo 3:  Tarangire National Park, Arusha, Tanzania. Photo by Ray Rui. [URL] (https://unsplash.com/photos/0mqrqbwjKc4)
+-   Photo 3:  Tarangire National Park, Arusha, Tanzania. Photo by Ray Rui. [URL](https://unsplash.com/photos/0mqrqbwjKc4)
 
 
--   Photo 4: Wiang Kum Kam, ตำบล ช้างเผือก, Thailand. Photo by Mathew Schwartz. [URL] (https://unsplash.com/photos/gsllxmVO4HQ)
+-   Photo 4: Wiang Kum Kam, ตำบล ช้างเผือก, Thailand. Photo by Mathew Schwartz. [URL](https://unsplash.com/photos/gsllxmVO4HQ)
 
 
-*Bottom cover* : Photo by Derek Thomson. [URL] (https://unsplash.com/photos/TWoL-QCZubY)
+*Bottom cover* : Photo by Derek Thomson. [URL](https://unsplash.com/photos/TWoL-QCZubY)
 
 
 ### Acknowledgements
