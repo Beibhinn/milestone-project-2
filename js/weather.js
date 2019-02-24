@@ -3,7 +3,9 @@
 
 function searchForWeather(searchTerms, onSuccess, onError) {
     if (searchTerms.trim().length < 4) {
-        return;
+        $("#weather-input").addClass("required");
+    } else {
+        $("#weather-input").removeClass("required");
     }
     $.ajax({
         type: "GET",
@@ -58,9 +60,6 @@ function handleWeatherResponse(response) {
 
 
 function searchForWeatherHistory(searchTerms, date, onSuccess, onError) {
-    if (searchTerms.trim().length < 4) {
-        return;
-    }
     $.ajax({
         type: "GET",
         url: "https://api.apixu.com/v1/forecast.json?key=4c9862bd1a0f484eae8130923191302&q="+encodeURIComponent(searchTerms.trim())+"&dt="+encodeURIComponent(date),
@@ -87,9 +86,9 @@ function handleHistoryResponse(response) {
             weather.children(".date").text(forecastday.date);
             weather.children(".icon").attr("src", condition.icon);
             weather.children(".description").text(condition.text);
-            weather.children(".mintemp").text("Min: " + forecastday.day.mintemp_c + "°C");
+            weather.children(".mintemp").text("Min Temp: " + forecastday.day.mintemp_c + "°C");
             weather.children(".avg-temp").text("Avg Temp: " + forecastday.day.avgtemp_c + "°C");
-            weather.children(".maxtemp").text("Max: " + forecastday.day.maxtemp_c + "°C");
+            weather.children(".maxtemp").text("Max Temp: " + forecastday.day.maxtemp_c + "°C");
             weather.children(".maxwind").text("Max Wind: " + forecastday.day.maxwind_kph + " kph");
             weather.children(".avghumidity").text("Avg Humidity: " + forecastday.day.avghumidity + "%");
             weather.children(".totalprecip").text("Total Precipitation: " + forecastday.day.totalprecip_mm + "mm");

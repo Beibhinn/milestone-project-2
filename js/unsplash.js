@@ -13,7 +13,9 @@ $("#photo-input").on('keypress',function(e) {
 
 function searchForPhotos(searchTerms, onSuccess, onError) {
     if (searchTerms.trim().length < 4) {
-        return;
+        $("#photo-input").addClass("required");
+    } else {
+        $("#photo-input").removeClass("required");
     }
     $.ajax({ 
        type : "GET", 

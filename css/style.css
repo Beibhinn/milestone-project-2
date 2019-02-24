@@ -288,6 +288,11 @@ button.submit,
     margin-bottom: 10px;
 }
 
+.required {
+    border-color: red;
+    border-style: ridge;
+}
+
 #photo-carousel-elements,
 #photo-carousel-elements > .item > img,
 #photo-carousel-elements > .item .active > img {
