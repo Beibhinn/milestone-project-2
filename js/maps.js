@@ -36,6 +36,8 @@ function initMap() {
     streetViewControl: false,
     zoom: 9
   });
+  $("#map").append(`<div id="alert" class="alert alert-warning alert-dismissible" style="display:none">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>There doesn't seem to be anything like that nearby. Please try a different search.</div>`);
   service = new google.maps.places.PlacesService(map);
 
   $("#search-bar").on("change keyup paste mouseup", debounce(searchForPlaces, 500));
@@ -198,9 +200,8 @@ function searchNearby(searchFor) {
   function callback(results, status) {
     console.log("Searching nearby");
     if (results.length === 0) {
-        $("#alert").hide();
-        $("#map").append(`<div id="alert" class="alert alert-warning alert-dismissible">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>There doesn't seem to be anything like that nearby. Please try a different search.</div>`);
+        
+        $("#alert").show();
     } 
     else if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMarkers(results);
