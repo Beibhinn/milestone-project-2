@@ -1,5 +1,6 @@
 /*global $*/
 /*global google*/
+/*jshint esversion: 6 */
 
 // This function taken from https://davidwalsh.name/javascript-debounce-function
 // Returns a function, that, as long as it continues to be invoked, will not
@@ -19,7 +20,7 @@ function debounce(func, wait, immediate) {
 		timeout = setTimeout(later, wait);
 		if (callNow) func.apply(context, args);
 	};
-};
+}
 
 var map;
 var service;
@@ -105,7 +106,7 @@ function initAutocomplete() {
   // more details for that place.
   searchBox.addListener('places_changed', function() {
     $("#alert").hide();
-    createMarkers(searchBox.getPlaces());
+    createMarkers(searchBox.getPlaces(), false);
   });
 }
 
@@ -116,7 +117,7 @@ function initAutocomplete() {
     markers = [];
   }
 
- function createMarkers(placesArray) {
+ function createMarkers(placesArray, addInfoWindows = true) {
    clearMarkers();
    
    if (placesArray.length == 0) {
@@ -125,25 +126,18 @@ function initAutocomplete() {
    
     // This bounds will be used to zoom the map to show all places.
     var bounds = new google.maps.LatLngBounds();
+  
     
     placesArray.forEach(function(place) {
       if (!place.geometry) {
         console.log("Returned place contains no geometry");
         return;
       }
-      
-      var icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-      };
 
       // Create a marker for each place.
       var marker = new google.maps.Marker({
         map: map,
-        //icon: icon,
+        icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
         title: place.name,
         rating: place.rating,
         address: place.formatted_address,
@@ -152,6 +146,7 @@ function initAutocomplete() {
 
       bounds.extend(place.geometry.location);
       
+      if (addInfoWindows) {
          var contentString = '<div id="content">'+
             `<h6 id="firstHeading" class="firstHeading">${place.name}</h6>`+
             '<div id="bodyContent">'+
@@ -159,15 +154,20 @@ function initAutocomplete() {
             `<p> ${place.vicinity}</p>`+
             '</div>'+
             '</div>';
-
-      var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        }); 
-      
-      google.maps.event.addListener(marker, 'click', function() {
-        console.log(place);
-        infowindow.open(map, this);
-      });
+  
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          }); 
+        
+        google.maps.event.addListener(marker, 'click', function() {
+          console.log(place);
+          infowindow.open(map, this);
+        });
+        
+      } else {
+        // Use a separate icon when the marker has no info window.
+        marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+      }
     
       // Keep track of the marker so we can remove it later.
       markers.push(marker);
