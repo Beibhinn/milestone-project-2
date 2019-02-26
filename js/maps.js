@@ -37,6 +37,7 @@ function initMap() {
     streetViewControl: false,
     zoom: 9
   });
+  /*the alert is added here as I wanted it to be displayed on the map, however when I set it as a child of the div#map, it wouldn't show over the API info*/
   $("#map").append(`<div id="alert" class="alert alert-warning alert-dismissible" style="display:none">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>There doesn't seem to be anything like that nearby. Please try a different search.</div>`);
   service = new google.maps.places.PlacesService(map);

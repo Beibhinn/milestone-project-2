@@ -51,8 +51,6 @@ function handleWeatherResponse(response) {
         wc.children(".maxtemp").text("Max: " + forecastday.day.maxtemp_c + "°C");
         wc.children(".mintemp").text("Min: " + forecastday.day.mintemp_c + "°C");
     }
-     // document.getElementById("weather-box").style.display = "inline-block";
-     // document.getElementById("history-search").style.display = "block";
      $("#results-location").show("slow", "linear");
      $("#weather-box").show("slow", "linear").addClass("shown");
      $("#history-search").show("fast", "linear");
@@ -69,12 +67,6 @@ function handleWeatherError(error) {
         return;
     }
 }
-
-
-
-
-
-
 
 
 function searchForWeatherHistory(searchTerms, date, onSuccess, onError) {
