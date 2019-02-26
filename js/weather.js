@@ -61,9 +61,9 @@ function handleWeatherError(error) {
         $("#no-weather").fadeIn(400).css("display","inline-block").removeClass("hidden");
         $("#results-location").hide("fast", "linear");
         $("#weather-box").hide("fast", "linear").removeClass("shown");
-        $("#history-search").hide("fast", "linear");
-        $("#history-box").hide("fast", "linear");
-        $("#history-fail").hide("fast", "linear");
+        $("#history-search").hide("slow", "linear");
+        $("#history-box").hide("slow", "linear");
+        $("#history-fail").hide("slow", "linear");
         return;
     }
 }

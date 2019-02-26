@@ -301,6 +301,8 @@ button.submit,
         0px -7px 7px rgba(0, 0, 0, 0.12), 
         0px 7px 7px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .hidden {
@@ -484,6 +486,7 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
     margin-left: 25%;
     margin-bottom: 15px;
     font-family: 'Montserrat Alternates', sans-serif; 
+    padding: 10px;
 }
 
 @media (min-width: 992px) {
