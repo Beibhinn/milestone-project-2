@@ -31,7 +31,7 @@ function searchForPhotos(searchTerms, onSuccess, onError) {
 function handleUnsplashResponse(response) {
     console.log(response);
     if (response.results.length == 0) {
-        $("#photo-carousel").fadeOut(800);
+        $("#photo-carousel").fadeOut(400).addClass("hidden");
         $("#photo-fail").fadeIn(400).css("display","inline-block").removeClass("hidden");
         return;
     }
@@ -46,6 +46,6 @@ function handleUnsplashResponse(response) {
         carousel.append("<div class=\"item\"><img src='"+response.results[i].urls.regular+"'/></div>");
     }
     
-    $("#photo-carousel").fadeIn(800);
+    $("#photo-carousel").fadeIn(400).removeClass("hidden");
 
 }

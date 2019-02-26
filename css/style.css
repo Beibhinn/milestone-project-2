@@ -17,10 +17,6 @@ html, body {
 body {
    height: 100%;
    overflow-x: hidden;
-   transition: 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -webkit-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out;
 }
 
 
@@ -309,6 +305,13 @@ button.submit,
     display: none;
 }
 
+#photo-carousel {
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out; 
+}
+
 #photo-carousel-elements,
 #photo-carousel-elements > .item > img,
 #photo-carousel-elements > .item .active > img {
@@ -382,15 +385,14 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
     color: #054a91;
 }
 
-
 .content>p {
     padding-left: 10px;
     padding-right: 10px;
     font-family: 'Montserrat Alternates', sans-serif; 
-    transition: 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -webkit-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out; 
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out; 
 }
 
 
@@ -409,6 +411,10 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
     border-radius: 10px;
     max-width: 50%;
     display: inline-block;
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out; 
 }
 
 #no-weather>p {
@@ -418,13 +424,17 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
 #results-location {
     text-align: center;
     margin-bottom: 10px;
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
 }
 
 #weather-box {
-    transition: 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -webkit-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out;
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
 }
 
 .shown {
@@ -443,14 +453,19 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
     margin-left: 2.5%;
     margin-right: 2.5%;
     height: 225px;
+    padding-top: 10px;
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
 }
 
 .weather-container>div,
 .weather-container>img {
-    transition: 2s ease-in-out;
-    -moz-transition: all 2s ease-in-out;
-    -webkit-transition: all 2s ease-in-out;
-    -o-transition: all 2s ease-in-out;
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
 }
 
 
@@ -468,6 +483,13 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
     padding-top: 5px;
 }
 
+#history-search {
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
 #weather-history {
     width: 100%;
 }
@@ -478,6 +500,12 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
     margin-left: 25%;
     margin-bottom: 15px;
     padding-bottom: 10px;
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    font-family: 'Montserrat Alternates', sans-serif;
+    padding-top: 0px;
 }
 
 #history-fail {
@@ -487,6 +515,10 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
     margin-bottom: 15px;
     font-family: 'Montserrat Alternates', sans-serif; 
     padding: 10px;
+    transition: 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
 }
 
 @media (min-width: 992px) {
@@ -612,6 +644,10 @@ button.dropdown-toggle {
 
 #info-results {
     font-family: 'Montserrat Alternates', sans-serif;
+    transition: 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 
 tr {

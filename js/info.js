@@ -47,5 +47,5 @@ function handleInfoResponse(response) {
     pic.attr("src", infoResponse.flag);
     
     
-    $("#info-results").show("slow", "linear").addClass("shown");
+    $("#info-results").fadeIn(400).css("display","inline-block").removeClass("hidden");
 }

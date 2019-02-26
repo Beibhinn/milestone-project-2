@@ -31,6 +31,7 @@ function handleWeatherResponse(response) {
     
     $("#no-weather").fadeOut(400).addClass("hidden");
     $("#history-box").hide("fast", "linear");
+    $("#history-fail").hide("fast", "linear");
     
     let weather = $("#weather-results");
     let responseForecast = response.forecast.forecastday;
@@ -51,19 +52,19 @@ function handleWeatherResponse(response) {
         wc.children(".maxtemp").text("Max: " + forecastday.day.maxtemp_c + "°C");
         wc.children(".mintemp").text("Min: " + forecastday.day.mintemp_c + "°C");
     }
+     $("#weather-box").fadeIn(400).css("display","inline-block").removeClass("hidden");
      $("#results-location").show("slow", "linear");
-     $("#weather-box").show("slow", "linear").addClass("shown");
-     $("#history-search").show("fast", "linear");
+     $("#history-search").fadeIn(400).removeClass("hidden");
 }
 
 function handleWeatherError(error) {
     if (error.statusText == "Bad Request") {
         $("#no-weather").fadeIn(400).css("display","inline-block").removeClass("hidden");
         $("#results-location").hide("fast", "linear");
-        $("#weather-box").hide("fast", "linear").removeClass("shown");
-        $("#history-search").hide("slow", "linear");
-        $("#history-box").hide("slow", "linear");
-        $("#history-fail").hide("slow", "linear");
+        $("#weather-box").fadeOut(400).addClass("hidden");
+        $("#history-search").fadeOut(400).addClass("hidden");
+        $("#history-box").fadeOut(400).addClass("hidden");
+        $("#history-fail").fadeOut(400).addClass("hidden");
         return;
     }
 }
@@ -89,8 +90,8 @@ function handleHistoryResponse(response) {
     let forecastday = response.forecast.forecastday[0];
     
     if(forecastday){
-            weather.show("slow", "linear");
-            $("#history-fail").hide("fast", "linear");
+            weather.fadeIn(400).css("display","inline-block").removeClass("hidden");
+            $("#history-fail").fadeOut(400).addClass("hidden");
             let condition = forecastday.day.condition;
             
             weather.children(".date").text(forecastday.date);
@@ -104,7 +105,7 @@ function handleHistoryResponse(response) {
             weather.children(".totalprecip").text("Total Precipitation: " + forecastday.day.totalprecip_mm + "mm");
     }
     else {
-        weather.hide("fast", "linear");
-        $("#history-fail").fadeIn(400).css("display","inline-block");
+        weather.fadeOut(400).addClass("hidden");
+        $("#history-fail").fadeIn(400).css("display","inline-block").removeClass("hidden");
     }
 }
