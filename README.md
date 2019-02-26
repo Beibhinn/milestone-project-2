@@ -142,6 +142,8 @@ CSS was copied and pasted into [https://jigsaw.w3.org/css-validator/#validate_by
 
    -  Enter in a search term/ location, press 'enter' on the keyboard to ensure this also triggers a search and verify that the user is shown a carousel of photos relating to their search.
 
+   -  Enter in an invalid search term/ location, submit, and verify that a message appears advising the user that there are no results.
+
    -  Click the left and right arrows to ensure that the photo changes as the user clicks.
 
    -  Adjust size of browser window to various sizes, to ensure the unsplash carousel resizes well and is responsive.
@@ -165,6 +167,8 @@ CSS was copied and pasted into [https://jigsaw.w3.org/css-validator/#validate_by
    -  Enter a city and country, click 'submit'. Verify the location name appears below the submit button, as well as 5 boxes displaying the forecast for the coming five days.
 
    -  Repeat the step above, pressing 'enter' on the keyboard to trigger the search.
+
+   -  Enter an invalid search term, click 'submit', and verify a message appears to inform the user that there are no results. 
 
    -  Select a date in the past to see additional information. Verify an information box containing the requested details appears.
 
@@ -223,6 +227,13 @@ CSS was copied and pasted into [https://jigsaw.w3.org/css-validator/#validate_by
 *API and Javascript testing*:
 
 Each feature which uses an API was tested manually, and while the code was being written, messages were logged to the console, to ensure the code was functioning as it should. Scripts were checked on [https://jshint.com](https://jshint.com)
+
+The testing of my scripts was also automated as much as possible, with the use of [Jasmine](https://jasmine.github.io/). I took a Behavior-Driven Development (BDD) approach towards writing my tests, focusing on the behaviours and possible actions of the users as they interact with the website. I then wrote a test for each of these behaviours, which failed. The tests were then until they passed.
+
+An important issue to note, was that I could not automate the testing for the Google Maps API at this time. I tried adding a 'div' to the test html, using the same 'map' ID as I had used in my script, to replicate my own html; this did not work. Many of the functions and syntax used by Google Maps were not being recongised by Jasmine. 
+I was able to locate a third-party mock for Google Maps, however I was unable to find any mocks that also included the Google PlacesService. I manually tested this feature as much as possible, exploring the possible actions as a user, and also by logging messages to the console throughout. I have left the Maps test I had written within the ProjectSpec.js file, commented out, for reference. 
+
+My tests can be viewed [here](https://github.com/Beibhinn/milestone-project-2/blob/master/jasmine/spec/ProjectSpec.js). The tests can be run on the [SpecRunner.html](https://beibhinn.github.io/jasmine/Specrunner.html) page, which was downloaded from the jasmine website and edited to include links to my scripts.
 
 *Page speed*:
 
