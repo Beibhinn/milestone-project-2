@@ -113,6 +113,6 @@ function handleHistoryResponse(response) {
     }
     else {
         weather.hide("fast", "linear");
-        $("#history-fail").show("slow", "linear");
+        $("#history-fail").fadeIn(400).css("display","inline-block");
     }
 }
