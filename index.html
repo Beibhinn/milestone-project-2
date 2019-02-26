@@ -123,22 +123,30 @@
                             <div>
                                 <button class="btn btn-info submit" onclick="onPhotoSearchSubmit()">Submit</button>
                             </div>
-                            <p id="photo-fail" class="hidden">Sorry, it doesn't look like we have any photos that match your search.</p>
                         </div>
                     </div>
-                    <!--data-interval is false as if the carousel continues to automatically slide, it can upset user experience when the user moves further down the page. 
-                    (The carousel resizing depending on the photos can cause the users position on the page to jump)-->
-                    <div id="photo-carousel" class="carousel slide hidden" data-interval="false">
-                        <!-- Wrapper for carousel items -->
-                        <div id="photo-carousel-elements" class="carousel-inner"></div>
-                        <!-- Carousel controls -->
-                        <a class="carousel-control left" href="#photo-carousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a class="carousel-control right" href="#photo-carousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="content col-xs-12">
+                <p id="photo-fail" class="hidden">Sorry, it doesn't look like we have any photos that match your search.</p>
+            </div>
+        </div>
+        <!--data-interval is false as if the carousel continues to automatically slide, it can upset user experience when the user moves further down the page. 
+        (The carousel resizing depending on the photos can cause the users position on the page to jump)-->
+        <div class="row">
+            <div class="container">
+                <div id="photo-carousel" class="carousel slide hidden" data-interval="false">
+                    <!-- Wrapper for carousel items -->
+                    <div id="photo-carousel-elements" class="carousel-inner"></div>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control left" href="#photo-carousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="carousel-control right" href="#photo-carousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -194,35 +202,35 @@
                         <div class="weather-container weather1 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
                             <!--src for all img="icon" added with javascript in js/weather.js-->
-                            <img class="icon" alt="Weather icon"/> 
+                            <img class="icon" alt="Weather icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather2 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon" alt="Weather icon"/>
+                            <img class="icon" alt="Weather icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather3 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon" alt="Weather icon"/>
+                            <img class="icon" alt="Weather icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather4 col-xs-6 col-xs-offset-3 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon" alt="Weather icon"/>
+                            <img class="icon" alt="Weather icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
                         </div>
                         <div class="weather-container weather5 col-xs-6 col-xs-offset-3 col-sm-offset-5 col-sm-2">
                             <div class="date"></div>
-                            <img class="icon" alt="Weather icon"/>
+                            <img class="icon" alt="Weather icon" />
                             <div class="description"></div>
                             <div class="maxtemp"></div>
                             <div class="mintemp"></div>
@@ -231,7 +239,7 @@
                 </div>
             </div>
             <div class="row">
-                <div id="history-search" class="content hidden"> 
+                <div id="history-search" class="content hidden">
                     <!-- Date input only appears after a location has already been searched for, as location is also a requirement for the history feature. 
                     This allows the user to choose location, then narrow down again by date-->
                     <p>Choose a date to see weather for that particular day.</p>
@@ -245,7 +253,7 @@
                     <div id="history-box" class="weather-container col-xs-12 col-md-6 col-md-offset-3 hidden">
                         <div class="date history"></div>
                         <!--src for img class="icon history" added with javascript in js/weather.js-->
-                        <img class="icon history" alt="Weather icon"/>
+                        <img class="icon history" alt="Weather icon" />
                         <div class="description history"></div>
                         <div class="mintemp history"></div>
                         <div class="avg-temp history"></div>
@@ -304,14 +312,14 @@
                                     <div class="dropdown-data train-stations"><a class="dropdown-item train-stations">Train stations</a></div>
                                     <div class="dropdown-data zoos"><a class="dropdown-item zoos">Zoos</a></div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-6">
-                    <!-- map container--> 
+                    <!-- map container-->
                     <div id="map">
-                        
+
                     </div>
 
                 </div>

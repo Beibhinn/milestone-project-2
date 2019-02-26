@@ -299,6 +299,7 @@ button.submit,
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 50%;
 }
 
 .hidden {
@@ -310,6 +311,8 @@ button.submit,
     -moz-transition: all 1s ease-in-out;
     -webkit-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out; 
+    max-width: 1000px;
+    margin: auto;
 }
 
 #photo-carousel-elements,
@@ -415,6 +418,7 @@ div._212jACm3Qvbr7mg9TLrgzC>label.bpk-radio {
     -moz-transition: all 1s ease-in-out;
     -webkit-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out; 
+    width: 50%;
 }
 
 #no-weather>p {
