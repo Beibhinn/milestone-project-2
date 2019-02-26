@@ -233,7 +233,7 @@ The testing of my scripts was also automated as much as possible, with the use o
 An important issue to note, was that I could not automate the testing for the Google Maps API at this time. I tried adding a 'div' to the test html, using the same 'map' ID as I had used in my script, to replicate my own html; this did not work. Many of the functions and syntax used by Google Maps were not being recongised by Jasmine. 
 I was able to locate a third-party mock for Google Maps, however I was unable to find any mocks that also included the Google PlacesService. I manually tested this feature as much as possible, exploring the possible actions as a user, and also by logging messages to the console throughout. I have left the Maps test I had written within the ProjectSpec.js file, commented out, for reference. 
 
-My tests can be viewed [here](https://github.com/Beibhinn/milestone-project-2/blob/master/jasmine/spec/ProjectSpec.js). The tests can be run on the [SpecRunner.html](https://beibhinn.github.io/jasmine/Specrunner.html) page, which was downloaded from the jasmine website and edited to include links to my scripts.
+My tests can be viewed [here](https://github.com/Beibhinn/milestone-project-2/blob/master/jasmine/spec/ProjectSpec.js). The tests can be run on the [SpecRunner.html](https://beibhinn.github.io/milestone-project-2/jasmine/SpecRunner.html) page, which was downloaded from the jasmine website and edited to include links to my scripts.
 
 *Page speed*:
 
