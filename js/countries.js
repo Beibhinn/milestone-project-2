@@ -6,10 +6,10 @@ window.onload = function() {
   initCountries();
   let dropdown = $("#country-dropdown");
   for(var i = 0; i < countries.length; ++i) {
-    dropdown.append(`<div data-country=${countries[i]} class="dropdown-data"><a class="dropdown-item">${countries[i]}</a></div>`);
+    dropdown.append(`<div data-country="${countries[i].replace(" ", "_")}" class="dropdown-data"><a class="dropdown-item">${countries[i]}</a></div>`);
   }
   dropdown.children().click(function() {
-    onInfoSubmit(this.dataset.country);
+    onInfoSubmit(this.dataset.country.replace("_", " "));
   });
 };
 
