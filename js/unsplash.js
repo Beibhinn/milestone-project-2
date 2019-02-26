@@ -15,6 +15,7 @@ $("#photo-input").on('keypress',function(e) {
 function searchForPhotos(searchTerms, onSuccess, onError) {
     if (searchTerms.trim().length < 4) {
         $("#photo-input").addClass("required");
+        return;
     } else {
         $("#photo-input").removeClass("required");
     }
