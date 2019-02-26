@@ -30,6 +30,8 @@ function handleWeatherResponse(response) {
     console.log(response);
     
     $("#no-weather").fadeOut(400).addClass("hidden");
+    $("#history-box").hide("fast", "linear");
+    
     let weather = $("#weather-results");
     let responseForecast = response.forecast.forecastday;
     let weatherBox = $("#weather-box");
@@ -63,6 +65,7 @@ function handleWeatherError(error) {
         $("#weather-box").hide("fast", "linear").removeClass("shown");
         $("#history-search").hide("fast", "linear");
         $("#history-box").hide("fast", "linear");
+        $("#history-fail").hide("fast", "linear");
         return;
     }
 }
