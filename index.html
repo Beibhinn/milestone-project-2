@@ -123,6 +123,7 @@
                             <div>
                                 <button class="btn btn-info submit" onclick="onPhotoSearchSubmit()">Submit</button>
                             </div>
+                            <p id="photo-fail" class="hidden">Sorry, it doesn't look like we have any photos that match your search.</p>
                         </div>
                     </div>
                     <!--data-interval is false as if the carousel continues to automatically slide, it can upset user experience when the user moves further down the page. 
@@ -185,6 +186,9 @@
             </div>
             <div class="row">
                 <div id="weather-results" class="container-fluid">
+                    <div id="no-weather" class="content hidden">
+                        <p>Sorry, we can't seem to find weather for that place!</p>
+                    </div>
                     <div id="results-location"></div>
                     <div id="weather-box" class="container row" style="display: none">
                         <div class="weather-container weather1 col-xs-6 col-xs-offset-3 col-sm-2">

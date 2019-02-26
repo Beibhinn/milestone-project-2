@@ -17,7 +17,7 @@ function searchForWeather(searchTerms, onSuccess, onError) {
 }
 
 function onWeatherSubmit() {
-    searchForWeather($("#weather-input").val(), handleWeatherResponse, (e) => console.log(e));
+    searchForWeather($("#weather-input").val(), handleWeatherResponse, handleWeatherError);
 }
 
 $("#weather-input").on('keypress',function(e) {
@@ -28,6 +28,8 @@ $("#weather-input").on('keypress',function(e) {
 
 function handleWeatherResponse(response) {
     console.log(response);
+    
+    $("#no-weather").fadeOut(400).addClass("hidden");
     let weather = $("#weather-results");
     let responseForecast = response.forecast.forecastday;
     let weatherBox = $("#weather-box");
@@ -49,8 +51,20 @@ function handleWeatherResponse(response) {
     }
      // document.getElementById("weather-box").style.display = "inline-block";
      // document.getElementById("history-search").style.display = "block";
+     $("#results-location").show("slow", "linear");
      $("#weather-box").show("slow", "linear").addClass("shown");
      $("#history-search").show("fast", "linear");
+}
+
+function handleWeatherError(error) {
+    if (error.statusText == "Bad Request") {
+        $("#no-weather").fadeIn(400).css("display","inline-block").removeClass("hidden");
+        $("#results-location").hide("fast", "linear");
+        $("#weather-box").hide("fast", "linear").removeClass("shown");
+        $("#history-search").hide("fast", "linear");
+        $("#history-box").hide("fast", "linear");
+        return;
+    }
 }
 
 

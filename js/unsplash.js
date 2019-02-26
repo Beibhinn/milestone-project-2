@@ -31,11 +31,14 @@ function searchForPhotos(searchTerms, onSuccess, onError) {
 function handleUnsplashResponse(response) {
     console.log(response);
     if (response.results.length == 0) {
+        $("#photo-carousel").fadeOut(800);
+        $("#photo-fail").fadeIn(400).css("display","inline-block").removeClass("hidden");
         return;
     }
     
     let carousel = $("#photo-carousel-elements");
-
+    
+    $("#photo-fail").fadeOut(400).addClass("hidden");
     carousel.empty(); // Clear out any previous carousel items
     carousel.append("<div class=\"item active\"><img src='"+response.results[0].urls.regular+"'/></div>");
     
